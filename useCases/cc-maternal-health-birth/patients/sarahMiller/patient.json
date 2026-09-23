@@ -1,0 +1,31 @@
+{
+	"patientId": "13450148",
+	"demographics": {
+		"firstName": "Sarah",
+		"lastName": "Miller",
+		"fullName": "Sarah A. Miller",
+		"dob": "1995-04-23"
+		
+	},
+	"transactions": [
+		{
+			"name": "send-outpatient-visit-notification",
+			"payloadContents": [
+				{
+					"name": "HL7 V2 Outpatient Visit Notification",
+					"contentFile": "tx1-notif.txt"
+
+				},
+				{
+					"name": "Human-readable healthcare communication",
+					"contentFile": "tx1-human-readable.txt"
+				},
+				{
+					"name": "HTML healthcare communication",
+					"contentFile": "tx1-human-readable.html"
+				}			
+			]
+		}
+	]
+	
+}

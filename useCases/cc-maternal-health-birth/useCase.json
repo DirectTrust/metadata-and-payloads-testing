@@ -1,0 +1,32 @@
+{
+	"useCaseName": "cc-maternal-health-birth",
+	"useCaseDisplayName": "Maternal Health – Birth",
+	
+	"transactions": [
+		{
+			"name": "send-outpatient-visit-notification",
+			"description": "Completion of an outpatient maternal-health encounter in human-readable and machine-processable form",
+			"metadataTypeCode": "urn:dt-org:dsm:map:SMTP+XD:1.0",
+			"purpose": "TREATMENT",
+			"workflowStatusRequeted": "",
+			"payloadContainerTypes": "XD",
+			"payloadContents": [
+				{
+					"name": "HL7 V2 Outpatient Visit Notification",
+					"required": "true",
+					"mimeType": "text/hl7v2"
+				},
+				{
+					"name": "Human-readable healthcare communication",
+					"required": "true",
+					"mimeType": "text/plain"
+				},
+				{
+					"name": "HTML healthcare communication",
+					"required": "false",
+					"mimeType": "text/html"
+				}			
+			]
+		}
+	]
+}
