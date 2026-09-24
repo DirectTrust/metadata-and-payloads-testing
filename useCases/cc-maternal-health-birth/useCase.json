@@ -28,6 +28,58 @@
 					"mimeType": "text/html"
 				}			
 			]
-		}
+		},
+		{
+			"name": "send-admission-notification",
+			"description": "Conveys a maternal health visit notification in both human-readable and machine-processable form",
+			"metadataTypeCode": "urn:dt-org:dsm:map:SMTP+XD:1.0",
+			"purpose": "TREATMENT",
+			"workflowStatusRequeted": "",
+			"payloadContainerTypes": "XD",
+			"patientContextRequired": "true",
+			"payloadContents": [
+				{
+					"name": "HL7 V2 Outpatient Visit Notification",
+					"required": "true",
+					"mimeType": "text/hl7v2"
+				},
+				{
+					"name": "Human-readable healthcare communication",
+					"required": "true",
+					"mimeType": "text/plain"
+				},
+				{
+					"name": "HTML healthcare communication",
+					"required": "false",
+					"mimeType": "text/html"
+				}			
+			]
+		},
+		{
+			"name": "send-birth-notification",
+			"description": "Derived maternal-health transaction created after a newborn admission/registration event is detected and the newborn is successfully associated with the maternal patient",
+			"metadataTypeCode": "urn:dt-org:dsm:map:SMTP+XD:1.0",
+			"purpose": "TREATMENT",
+			"workflowStatusRequeted": "",
+			"payloadContainerTypes": "XD",
+			"patientContextRequired": "true",
+			"payloadContents": [
+				{
+					"name": "CDA Birth Notification",
+					"required": "true",
+					"mimeType": "application/xml+cda"
+				},
+				{
+					"name": "Human-readable healthcare communication",
+					"required": "true",
+					"mimeType": "text/plain"
+				},
+				{
+					"name": "HTML healthcare communication",
+					"required": "false",
+					"mimeType": "text/html"
+				}			
+			]
+		}		
 	]
 }

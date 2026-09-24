@@ -25,7 +25,44 @@
 					"contentFile": "tx1-human-readable.html"
 				}			
 			]
-		}
+		},
+		{
+			"name": "send-admission-notification",
+			"payloadContents": [
+				{
+					"name": "HL7 V2 Outpatient Visit Notification",
+					"contentFile": "tx2-notif.txt"
+
+				},
+				{
+					"name": "Human-readable healthcare communication",
+					"contentFile": "tx2-human-readable.txt"
+				},
+				{
+					"name": "HTML healthcare communication",
+					"contentFile": "tx2-human-readable.html"
+				}			
+			]
+		},
+		{
+			"name": "send-birth-notification",
+			"payloadContents": [
+				{
+					"name": "CDA Birth Notification",
+					"contentFile": "tx3-notif.xml"
+
+				},
+				{
+					"name": "Human-readable healthcare communication",
+					"contentFile": "tx3-human-readable.txt"
+				},
+				{
+					"name": "HTML healthcare communication",
+					"contentFile": "tx3-human-readable.html"
+				}			
+			]
+		}			
+		
 	]
 	
 }
