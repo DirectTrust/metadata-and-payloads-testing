@@ -61,7 +61,25 @@
 					"contentFile": "tx3-human-readable.html"
 				}			
 			]
-		}			
+		},
+		{
+			"name": "send-birth-notification",
+			"payloadContents": [
+				{
+					"name": "HL7 Version 2 notification",
+					"contentFile": "tx4-notif.txt"
+
+				},
+				{
+					"name": "Human-readable healthcare communication",
+					"contentFile": "tx4-human-readable.txt"
+				},
+				{
+					"name": "HTML healthcare communication",
+					"contentFile": "tx4-human-readable.html"
+				}			
+			]
+		}				
 		
 	]
 	

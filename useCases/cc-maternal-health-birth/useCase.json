@@ -80,6 +80,32 @@
 					"mimeType": "text/html"
 				}			
 			]
+		},
+		{
+			"name": "send-discharge-notification",
+			"description": "Conveys a maternal health discharge notification in both human-readable and machine-processable form",
+			"metadataTypeCode": "urn:dt-org:dsm:map:SMTP+XD:1.0",
+			"purpose": "TREATMENT",
+			"workflowStatusRequeted": "",
+			"payloadContainerTypes": "XD",
+			"patientContextRequired": "true",
+			"payloadContents": [
+				{
+					"name": "HL7 Version 2 notification",
+					"required": "true",
+					"mimeType": "text/hl7v2"
+				},
+				{
+					"name": "Human-readable healthcare communication",
+					"required": "true",
+					"mimeType": "text/plain"
+				},
+				{
+					"name": "HTML healthcare communication",
+					"required": "false",
+					"mimeType": "text/html"
+				}			
+			]
 		}		
 	]
 }
