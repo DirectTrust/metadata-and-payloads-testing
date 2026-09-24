@@ -10,6 +10,7 @@
 			"purpose": "TREATMENT",
 			"workflowStatusRequeted": "",
 			"payloadContainerTypes": "XD",
+			"patientContextRequired": "true",
 			"payloadContents": [
 				{
 					"name": "HL7 V2 Outpatient Visit Notification",
