@@ -106,6 +106,22 @@
 					"mimeType": "text/html"
 				}			
 			]
-		}		
+		},
+		{
+			"name": "send-documents",
+			"description": "Send one or more maternal health documents to support pregnancy notification, birth-services referral, antepartum information sharing, and continuity of care across settings",
+			"metadataTypeCode": "urn:dt-org:dsm:map:SMTP+XD:1.0",
+			"purpose": "TREATMENT",
+			"workflowStatusRequeted": "",
+			"payloadContainerTypes": "XD",
+			"patientContextRequired": "true",
+			"payloadContents": [
+				{
+					"name": "HL7 CDA Document",
+					"required": "true",
+					"mimeType": "application/xml+cda"
+				}		
+			]
+		}			
 	]
 }

@@ -61,6 +61,16 @@
 					"contentFile": "tx4-human-readable.html"
 				}			
 			]
+		},	
+		{
+			"name": "send-documents",
+			"payloadContents": [
+				{
+					"name": "HL7 CDA Document",
+					"contentFile": "tx5-cda.xml"
+
+				}		
+			]
 		}				
 		
 	]
