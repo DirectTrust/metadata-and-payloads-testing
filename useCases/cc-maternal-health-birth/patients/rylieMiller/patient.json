@@ -45,6 +45,24 @@
 			]
 		},
 		{
+			"name": "send-birth-notification",
+			"payloadContents": [
+				{
+					"name": "CDA Birth Notification",
+					"contentFile": "tx3-notif.xml"
+
+				},
+				{
+					"name": "Human-readable healthcare communication",
+					"contentFile": "tx3-human-readable.txt"
+				},
+				{
+					"name": "HTML healthcare communication",
+					"contentFile": "tx3-human-readable.html"
+				}			
+			]
+		},
+		{
 			"name": "send-discharge-notification",
 			"payloadContents": [
 				{
