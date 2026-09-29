@@ -4,7 +4,8 @@
 		"firstName": "Rylie",
 		"lastName": "Miller",
 		"fullName": "Rylie S. Miller",
-		"dob": "2026-09-25"
+		"dob": "2026-09-25",
+		"gender": "F"
 		
 	},
 	"transactions": [

@@ -1,0 +1,41 @@
+OUTPATIENT VISIT NOTIFICATION - MATERNAL HEALTH (PRENATAL)
+
+This message notifies you that a prenatal outpatient visit has been completed
+for the patient below. A machine-processable HL7 v2 notification (ADT^A03) is
+included in this package.
+
+PATIENT
+  Name:            Sarah A. Miller
+  Date of Birth:   1995-04-23
+  Sex:             Female
+  Patient ID:      13450148 (Sunrise OB/GYN Clinic MRN)
+
+VISIT
+  Visit Type:      Outpatient - prenatal visit
+  Visit Number:    V20260818001
+  Date:            2026-08-18
+  Start Time:      10:00 AM
+  End Time:        11:30 AM
+  Location:        Sunrise OB/GYN Clinic
+  Provider:        Dana M. Hall, MD (Obstetrics)
+
+PREGNANCY CONTEXT
+  Pregnancy Episode ID:        EP-20260107-13450148
+  Diagnosis:                   Supervision of normal pregnancy, third
+                               trimester (ICD-10-CM Z34.03)
+  Gestational Age at Visit:    34 weeks
+  Estimated Delivery Date:     2026-09-29
+
+SENDER
+  Sunrise OB/GYN Clinic
+
+RECIPIENT
+  Birthing Hospital
+
+Use Case:     cc-maternal-health-birth
+Transaction:  send-outpatient-visit-notification
+Purpose:      Treatment / care coordination
+
+CONFIDENTIALITY NOTICE: This message contains protected health information
+intended only for the named recipient. If you received it in error, please
+notify the sender and delete it.

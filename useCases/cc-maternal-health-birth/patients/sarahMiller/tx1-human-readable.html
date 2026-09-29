@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Outpatient Visit Notification - Maternal Health (Prenatal)</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; margin: 2em; color: #222; }
+  h1 { font-size: 1.4em; }
+  h2 { font-size: 1.1em; border-bottom: 1px solid #999; padding-bottom: 2px; margin-top: 1.5em; }
+  table { border-collapse: collapse; }
+  th { text-align: left; padding: 3px 16px 3px 0; vertical-align: top; font-weight: bold; }
+  td { padding: 3px 0; }
+  .notice { margin-top: 2em; font-size: 0.85em; color: #555; }
+</style>
+</head>
+<body>
+<h1>Outpatient Visit Notification - Maternal Health (Prenatal)</h1>
+<p>This message notifies you that a prenatal outpatient visit has been completed for the patient below.
+A machine-processable HL7 v2 notification (ADT^A03) is included in this package.</p>
+
+<h2>Patient</h2>
+<table>
+  <tr><th>Name</th><td>Sarah A. Miller</td></tr>
+  <tr><th>Date of Birth</th><td>1995-04-23</td></tr>
+  <tr><th>Sex</th><td>Female</td></tr>
+  <tr><th>Patient ID</th><td>13450148 (Sunrise OB/GYN Clinic MRN)</td></tr>
+</table>
+
+<h2>Visit</h2>
+<table>
+  <tr><th>Visit Type</th><td>Outpatient - prenatal visit</td></tr>
+  <tr><th>Visit Number</th><td>V20260818001</td></tr>
+  <tr><th>Date</th><td>2026-08-18</td></tr>
+  <tr><th>Start Time</th><td>10:00 AM</td></tr>
+  <tr><th>End Time</th><td>11:30 AM</td></tr>
+  <tr><th>Location</th><td>Sunrise OB/GYN Clinic</td></tr>
+  <tr><th>Provider</th><td>Dana M. Hall, MD (Obstetrics)</td></tr>
+</table>
+
+<h2>Pregnancy Context</h2>
+<table>
+  <tr><th>Pregnancy Episode ID</th><td>EP-20260107-13450148</td></tr>
+  <tr><th>Diagnosis</th><td>Supervision of normal pregnancy, third trimester (ICD-10-CM Z34.03)</td></tr>
+  <tr><th>Gestational Age at Visit</th><td>34 weeks</td></tr>
+  <tr><th>Estimated Delivery Date</th><td>2026-09-29</td></tr>
+</table>
+
+<h2>Sender / Recipient</h2>
+<table>
+  <tr><th>Sender</th><td>Sunrise OB/GYN Clinic</td></tr>
+  <tr><th>Recipient</th><td>Birthing Hospital</td></tr>
+</table>
+
+<h2>Transaction</h2>
+<table>
+  <tr><th>Use Case</th><td>cc-maternal-health-birth</td></tr>
+  <tr><th>Transaction</th><td>send-outpatient-visit-notification</td></tr>
+  <tr><th>Purpose</th><td>Treatment / care coordination</td></tr>
+</table>
+
+<p class="notice">CONFIDENTIALITY NOTICE: This message contains protected health information intended only for the named recipient.
+If you received it in error, please notify the sender and delete it.</p>
+</body>
+</html>
