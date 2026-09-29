@@ -122,6 +122,32 @@
 					"mimeType": "application/xml+cda"
 				}		
 			]
+		},	
+		{
+			"name": "send-workflow-status",
+			"description": "Communicates workflow status for a previously initiated transaction",
+			"metadataTypeCode": "urn:dt-org:dsm:map:SMTP+XD:1.0",
+			"purpose": "TREATMENT",
+			"workflowStatusRequeted": "",
+			"payloadContainerTypes": "XD",
+			"patientContextRequired": "true",
+			"payloadContents": [
+				{
+					"name": "FHIR Task workflow-status payload",
+					"required": "true",
+					"mimeType": "application/fhir+xml"
+				},
+				{
+					"name": "Human-readable healthcare communication",
+					"required": "true",
+					"mimeType": "text/plain"
+				},
+				{
+					"name": "HTML healthcare communication",
+					"required": "false",
+					"mimeType": "text/html"
+				}			
+			]
 		}			
 	]
 }

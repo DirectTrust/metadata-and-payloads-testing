@@ -71,6 +71,25 @@
 
 				}		
 			]
+		},	
+		{
+			"name": "send-workflow-status",
+			"payloadContents": [
+				{
+					"name": "FHIR Task workflow-status payload",
+					"contentFile": "tx8-status.xml"
+
+				},
+				{
+					"name": "Human-readable healthcare communication",
+					"contentFile": "tx8-human-readable.txt"
+				},
+				{
+					"name": "HTML healthcare communication",
+					"contentFile": "tx8-human-readable.html"
+				}	
+				
+			]
 		}				
 		
 	]
