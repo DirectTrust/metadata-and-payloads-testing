@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <realmCode code="US"/>
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+  <templateId root="2.16.840.1.113883.10.20.22.1.1"/>
+  <id root="2.16.840.1.113883.19.5.99999.2" extension="BIRTHNOTIF-20260925-664601340"/>
+  <!-- Temporary DirectTrust document type code, pending assignment of a LOINC Document Ontology code -->
+  <code code="DT-Birth" displayName="Birth Notification" codeSystem="2.16.840.1.113883.19.5.99999.9" codeSystemName="DirectTrust Temporary Document Types"/>
+  <title>Birth Notification</title>
+  <effectiveTime value="20260925101500-0400"/>
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" displayName="Normal"/>
+  <languageCode code="en-US"/>
+
+  <!-- The mother is the primary subject of the derived document (maternal patient identifier, maternal demographics) -->
+  <recordTarget>
+    <patientRole>
+      <id root="2.16.840.1.113883.19.5.99999.1" extension="13450148"/>
+      <addr use="HP">
+        <streetAddressLine>742 Maple Street</streetAddressLine>
+        <city>Columbus</city>
+        <state>OH</state>
+        <postalCode>43215</postalCode>
+        <country>US</country>
+      </addr>
+      <telecom use="HP" value="tel:+1-614-555-0142"/>
+      <patient>
+        <name>
+          <given>Sarah</given>
+          <given>A</given>
+          <family>Miller</family>
+        </name>
+        <administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" displayName="Female"/>
+        <birthTime value="19950423"/>
+      </patient>
+    </patientRole>
+  </recordTarget>
+
+  <!-- Provenance: original Information Source (birthing provider) -->
+  <author>
+    <time value="20260925101500-0400"/>
+    <assignedAuthor>
+      <id root="2.16.840.1.113883.4.6" extension="1234567906"/>
+      <addr>
+        <streetAddressLine>500 Hospital Way</streetAddressLine>
+        <city>Columbus</city>
+        <state>OH</state>
+        <postalCode>43210</postalCode>
+        <country>US</country>
+      </addr>
+      <telecom use="WP" value="tel:+1-614-555-0200"/>
+      <assignedPerson>
+        <name>
+          <given>Ellen</given>
+          <family>Ross</family>
+          <suffix>MD</suffix>
+        </name>
+      </assignedPerson>
+      <representedOrganization>
+        <id root="2.16.840.1.113883.19.5.99999.2"/>
+        <name>Birthing Hospital</name>
+      </representedOrganization>
+    </assignedAuthor>
+  </author>
+  <!-- Provenance: party that assembled/transformed the derived CDA from the newborn admission/registration event -->
+  <author>
+    <time value="20260925101500-0400"/>
+    <assignedAuthor>
+      <id root="2.16.840.1.113883.19.5.99999.2" extension="BIRTH-NOTIF-TRANSFORMER"/>
+      <assignedAuthoringDevice>
+        <manufacturerModelName>Birthing Hospital ADT Birth Notification Generator</manufacturerModelName>
+        <softwareName>Newborn Admission to Birth Notification Transformation 1.0</softwareName>
+      </assignedAuthoringDevice>
+      <representedOrganization>
+        <id root="2.16.840.1.113883.19.5.99999.2"/>
+        <name>Birthing Hospital</name>
+      </representedOrganization>
+    </assignedAuthor>
+  </author>
+
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id root="2.16.840.1.113883.19.5.99999.2"/>
+        <name>Birthing Hospital</name>
+        <telecom use="WP" value="tel:+1-614-555-0200"/>
+        <addr>
+          <streetAddressLine>500 Hospital Way</streetAddressLine>
+          <city>Columbus</city>
+          <state>OH</state>
+          <postalCode>43210</postalCode>
+          <country>US</country>
+        </addr>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+
+  <informationRecipient>
+    <intendedRecipient>
+      <id root="2.16.840.1.113883.19.5.99999.1"/>
+      <receivedOrganization>
+        <name>Sunrise OB/GYN Clinic</name>
+      </receivedOrganization>
+    </intendedRecipient>
+  </informationRecipient>
+
+  <!-- Newborn linked to the mother (daughter); mother's identifier corresponds to PID-21 of the newborn admission -->
+  <participant typeCode="IND">
+    <templateId root="2.16.840.1.113883.10.20.22.4.1000"/>
+    <associatedEntity classCode="PRS">
+      <id root="2.16.840.1.113883.19.5.99999.2" extension="664601340"/>
+      <code code="DAU" codeSystem="2.16.840.1.113883.5.111" displayName="Daughter"/>
+      <associatedPerson>
+        <name>
+          <given>Rylie</given>
+          <given>S</given>
+          <family>Miller</family>
+        </name>
+      </associatedPerson>
+    </associatedEntity>
+  </participant>
+
+  <!-- Pregnancy episode context -->
+  <documentationOf>
+    <serviceEvent classCode="PCPR">
+      <id root="2.16.840.1.113883.19.5.99999.1" extension="EP-20260107-13450148"/>
+      <code code="Z34.03" codeSystem="2.16.840.1.113883.6.90" displayName="Encounter for supervision of normal pregnancy, third trimester"/>
+      <effectiveTime>
+        <low value="20260107"/>
+        <high value="20260925"/>
+      </effectiveTime>
+    </serviceEvent>
+  </documentationOf>
+
+  <componentOf>
+    <encompassingEncounter>
+      <id root="2.16.840.1.113883.19.5.99999.2" extension="V20260925001"/>
+      <code code="IMP" codeSystem="2.16.840.1.113883.5.4" displayName="inpatient encounter"/>
+      <effectiveTime>
+        <low value="20260925060000-0400"/>
+      </effectiveTime>
+      <location>
+        <healthCareFacility>
+          <id root="2.16.840.1.113883.19.5.99999.2"/>
+          <location>
+            <name>Birthing Hospital - Labor and Delivery</name>
+          </location>
+        </healthCareFacility>
+      </location>
+    </encompassingEncounter>
+  </componentOf>
+
+  <component>
+    <structuredBody>
+      <component>
+        <section>
+          <code code="57074-7" codeSystem="2.16.840.1.113883.6.1" displayName="Labor and delivery process"/>
+          <title>Birth Event</title>
+          <text>
+            <table border="1">
+              <tbody>
+                <tr><th>Date/Time of Birth</th><td>2026-09-25 08:42 AM</td></tr>
+                <tr><th>Facility</th><td>Birthing Hospital - Labor and Delivery</td></tr>
+                <tr><th>Delivery Method</th><td>Spontaneous vaginal delivery</td></tr>
+                <tr><th>Birth Attendant</th><td>Ellen Ross, MD</td></tr>
+                <tr><th>Gestational Age at Birth</th><td>39 weeks</td></tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="18185-9" codeSystem="2.16.840.1.113883.6.1" displayName="Gestational age"/>
+              <statusCode code="completed"/>
+              <effectiveTime value="20260925084200-0400"/>
+              <value xsi:type="PQ" value="39" unit="wk"/>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="57074-7" codeSystem="2.16.840.1.113883.6.1" displayName="Labor and delivery process"/>
+          <title>Newborn (Related Subject)</title>
+          <subject>
+            <relatedSubject classCode="PRS">
+              <code code="DAU" codeSystem="2.16.840.1.113883.5.111" displayName="Daughter"/>
+              <subject classCode="PSN" determinerCode="INSTANCE">
+                <name>
+                  <given>Rylie</given>
+                  <given>S</given>
+                  <family>Miller</family>
+                </name>
+                <administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" displayName="Female"/>
+                <birthTime value="20260925084200-0400"/>
+              </subject>
+            </relatedSubject>
+          </subject>
+          <text>
+            <table border="1">
+              <tbody>
+                <tr><th>Name</th><td>Rylie S. Miller</td></tr>
+                <tr><th>Newborn Patient ID</th><td>664601340</td></tr>
+                <tr><th>Sex</th><td>Female</td></tr>
+                <tr><th>Date/Time of Birth</th><td>2026-09-25 08:42 AM</td></tr>
+                <tr><th>Birth Weight</th><td>3345 g</td></tr>
+                <tr><th>Apgar Score</th><td>1 minute: 8; 5 minutes: 9</td></tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="8339-4" codeSystem="2.16.840.1.113883.6.1" displayName="Birth weight Measured"/>
+              <statusCode code="completed"/>
+              <effectiveTime value="20260925084200-0400"/>
+              <value xsi:type="PQ" value="3345" unit="g"/>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="9272-6" codeSystem="2.16.840.1.113883.6.1" displayName="1 minute Apgar Score"/>
+              <statusCode code="completed"/>
+              <value xsi:type="INT" value="8"/>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="9274-2" codeSystem="2.16.840.1.113883.6.1" displayName="5 minute Apgar Score"/>
+              <statusCode code="completed"/>
+              <value xsi:type="INT" value="9"/>
+            </observation>
+          </entry>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>

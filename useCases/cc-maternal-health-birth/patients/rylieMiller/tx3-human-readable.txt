@@ -1,0 +1,45 @@
+BIRTH NOTIFICATION - MATERNAL HEALTH
+
+This message notifies you that the birth of a newborn has been recorded for
+the mother below. A machine-processable CDA Birth Notification (document type
+DT-Birth) is included in this package. The mother is the primary subject of
+the notification; the newborn is included as related information.
+
+MOTHER (PRIMARY SUBJECT)
+  Name:            Sarah A. Miller
+  Date of Birth:   1995-04-23
+  Sex:             Female
+  Patient ID:      13450148
+
+NEWBORN
+  Name:            Rylie S. Miller
+  Sex:             Female
+  Patient ID:      664601340
+  Relationship:    Daughter of Sarah A. Miller
+
+BIRTH EVENT
+  Date of Birth:   2026-09-25
+  Time of Birth:   8:42 AM
+  Facility:        Birthing Hospital - Labor and Delivery
+  Delivery Method: Spontaneous vaginal delivery
+  Attendant:       Ellen Ross, MD
+  Gestational Age: 39 weeks
+  Birth Weight:    3345 g
+  Apgar Score:     8 (1 minute), 9 (5 minutes)
+
+PREGNANCY CONTEXT
+  Pregnancy Episode ID:  EP-20260107-13450148
+
+SENDER
+  Birthing Hospital
+
+RECIPIENT
+  Sunrise OB/GYN Clinic
+
+Use Case:     cc-maternal-health-birth
+Transaction:  send-birth-notification
+Purpose:      Treatment / care coordination
+
+CONFIDENTIALITY NOTICE: This message contains protected health information
+intended only for the named recipient. If you received it in error, please
+notify the sender and delete it.

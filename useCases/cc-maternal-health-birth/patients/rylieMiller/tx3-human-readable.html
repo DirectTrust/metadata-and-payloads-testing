@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Birth Notification - Maternal Health</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; margin: 2em; color: #222; }
+  h1 { font-size: 1.4em; }
+  h2 { font-size: 1.1em; border-bottom: 1px solid #999; padding-bottom: 2px; margin-top: 1.5em; }
+  table { border-collapse: collapse; }
+  th { text-align: left; padding: 3px 16px 3px 0; vertical-align: top; font-weight: bold; }
+  td { padding: 3px 0; }
+  .notice { margin-top: 2em; font-size: 0.85em; color: #555; }
+</style>
+</head>
+<body>
+<h1>Birth Notification - Maternal Health</h1>
+<p>This message notifies you that the birth of a newborn has been recorded for the mother below.
+A machine-processable CDA Birth Notification (document type DT-Birth) is included in this package.
+The mother is the primary subject of the notification; the newborn is included as related information.</p>
+
+<h2>Mother (Primary Subject)</h2>
+<table>
+  <tr><th>Name</th><td>Sarah A. Miller</td></tr>
+  <tr><th>Date of Birth</th><td>1995-04-23</td></tr>
+  <tr><th>Sex</th><td>Female</td></tr>
+  <tr><th>Patient ID</th><td>13450148</td></tr>
+</table>
+
+<h2>Newborn</h2>
+<table>
+  <tr><th>Name</th><td>Rylie S. Miller</td></tr>
+  <tr><th>Sex</th><td>Female</td></tr>
+  <tr><th>Patient ID</th><td>664601340</td></tr>
+  <tr><th>Relationship</th><td>Daughter of Sarah A. Miller</td></tr>
+</table>
+
+<h2>Birth Event</h2>
+<table>
+  <tr><th>Date of Birth</th><td>2026-09-25</td></tr>
+  <tr><th>Time of Birth</th><td>8:42 AM</td></tr>
+  <tr><th>Facility</th><td>Birthing Hospital - Labor and Delivery</td></tr>
+  <tr><th>Delivery Method</th><td>Spontaneous vaginal delivery</td></tr>
+  <tr><th>Attendant</th><td>Ellen Ross, MD</td></tr>
+  <tr><th>Gestational Age</th><td>39 weeks</td></tr>
+  <tr><th>Birth Weight</th><td>3345 g</td></tr>
+  <tr><th>Apgar Score</th><td>8 (1 minute), 9 (5 minutes)</td></tr>
+</table>
+
+<h2>Pregnancy Context</h2>
+<table>
+  <tr><th>Pregnancy Episode ID</th><td>EP-20260107-13450148</td></tr>
+</table>
+
+<h2>Sender / Recipient</h2>
+<table>
+  <tr><th>Sender</th><td>Birthing Hospital</td></tr>
+  <tr><th>Recipient</th><td>Sunrise OB/GYN Clinic</td></tr>
+</table>
+
+<h2>Transaction</h2>
+<table>
+  <tr><th>Use Case</th><td>cc-maternal-health-birth</td></tr>
+  <tr><th>Transaction</th><td>send-birth-notification</td></tr>
+  <tr><th>Purpose</th><td>Treatment / care coordination</td></tr>
+</table>
+
+<p class="notice">CONFIDENTIALITY NOTICE: This message contains protected health information intended only for the named recipient.
+If you received it in error, please notify the sender and delete it.</p>
+</body>
+</html>
