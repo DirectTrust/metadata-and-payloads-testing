@@ -1,7 +1,7 @@
 {
 	"useCaseName": "cc-maternal-health-birth",
 	"useCaseDisplayName": "Maternal Health – Birth",
-	
+
 	"transactions": [
 		{
 			"name": "send-outpatient-visit-notification",
@@ -11,22 +11,55 @@
 			"workflowStatusRequeted": "",
 			"payloadContainerTypes": "XD",
 			"patientContextRequired": "true",
+			"metadata": {
+				"XD": {
+					"availabilityStatus": "urn:oasis:names:tc:ebxml-regrep:StatusType:Approved",
+					"contentTypeCode": "send-outpatient-visit-notification",
+					"purpose": "send-outpatient-visit-notification",
+					"title": "Outpatient Visit Notification",
+					"referenceIdContextTypes": ["pregnancy", "visit"]
+				}
+			},
 			"payloadContents": [
 				{
 					"name": "HL7 V2 Outpatient Visit Notification",
 					"required": "true",
-					"mimeType": "text/hl7v2"
+					"mimeType": "text/hl7v2",
+					"metadata": {
+						"XD": {
+							"classCode": "send-outpatient-visit-notification",
+							"typeCode": "98145-6",
+							"typeCodeDisplay": "Outpatient Visit notification",
+							"typeCodeSystem": "http://loinc.org"
+						}
+					}
 				},
 				{
 					"name": "Human-readable healthcare communication",
 					"required": "true",
-					"mimeType": "text/plain"
+					"mimeType": "text/plain",
+					"metadata": {
+						"XD": {
+							"classCode": "send-outpatient-visit-notification",
+							"typeCode": "56444-3",
+							"typeCodeDisplay": "Health communication document type",
+							"typeCodeSystem": "http://loinc.org"
+						}
+					}
 				},
 				{
 					"name": "HTML healthcare communication",
 					"required": "false",
-					"mimeType": "text/html"
-				}			
+					"mimeType": "text/html",
+					"metadata": {
+						"XD": {
+							"classCode": "send-outpatient-visit-notification",
+							"typeCode": "56444-3",
+							"typeCodeDisplay": "Health communication document type",
+							"typeCodeSystem": "http://loinc.org"
+						}
+					}
+				}
 			]
 		},
 		{
@@ -37,22 +70,54 @@
 			"workflowStatusRequeted": "",
 			"payloadContainerTypes": "XD",
 			"patientContextRequired": "true",
+			"metadata": {
+				"XD": {
+					"availabilityStatus": "urn:oasis:names:tc:ebxml-regrep:StatusType:Approved",
+					"contentTypeCode": "send-admission-notification",
+					"purpose": "send-admission-notification",
+					"title": "Admission Notification",
+					"referenceIdContextTypes": ["pregnancy", "visit", "request"]
+				}
+			},
 			"payloadContents": [
 				{
 					"name": "HL7 V2 Outpatient Visit Notification",
 					"required": "true",
-					"mimeType": "text/hl7v2"
+					"mimeType": "text/hl7v2",
+					"metadata": {
+						"XD": {
+							"classCode": "send-admission-notification",
+							"typeCode": "send-admission-notification",
+							"typeCodeDisplay": "Admission notification"
+						}
+					}
 				},
 				{
 					"name": "Human-readable healthcare communication",
 					"required": "true",
-					"mimeType": "text/plain"
+					"mimeType": "text/plain",
+					"metadata": {
+						"XD": {
+							"classCode": "send-admission-notification",
+							"typeCode": "56444-3",
+							"typeCodeDisplay": "Health communication document type",
+							"typeCodeSystem": "http://loinc.org"
+						}
+					}
 				},
 				{
 					"name": "HTML healthcare communication",
 					"required": "false",
-					"mimeType": "text/html"
-				}			
+					"mimeType": "text/html",
+					"metadata": {
+						"XD": {
+							"classCode": "send-admission-notification",
+							"typeCode": "56444-3",
+							"typeCodeDisplay": "Health communication document type",
+							"typeCodeSystem": "http://loinc.org"
+						}
+					}
+				}
 			]
 		},
 		{
@@ -63,22 +128,54 @@
 			"workflowStatusRequeted": "",
 			"payloadContainerTypes": "XD",
 			"patientContextRequired": "true",
+			"metadata": {
+				"XD": {
+					"availabilityStatus": "urn:oasis:names:tc:ebxml-regrep:StatusType:Approved",
+					"contentTypeCode": "send-birth-notification",
+					"purpose": "send-birth-notification",
+					"title": "Birth Notification",
+					"referenceIdContextTypes": ["pregnancy", "visit", "postpartum"]
+				}
+			},
 			"payloadContents": [
 				{
 					"name": "CDA Birth Notification",
 					"required": "true",
-					"mimeType": "application/xml+cda"
+					"mimeType": "application/xml+cda",
+					"metadata": {
+						"XD": {
+							"classCode": "send-birth-notification",
+							"typeCode": "DT-Birth",
+							"typeCodeDisplay": "Birth Notification (temporary code pending LOINC assignment)"
+						}
+					}
 				},
 				{
 					"name": "Human-readable healthcare communication",
 					"required": "true",
-					"mimeType": "text/plain"
+					"mimeType": "text/plain",
+					"metadata": {
+						"XD": {
+							"classCode": "send-birth-notification",
+							"typeCode": "56444-3",
+							"typeCodeDisplay": "Health communication document type",
+							"typeCodeSystem": "http://loinc.org"
+						}
+					}
 				},
 				{
 					"name": "HTML healthcare communication",
 					"required": "false",
-					"mimeType": "text/html"
-				}			
+					"mimeType": "text/html",
+					"metadata": {
+						"XD": {
+							"classCode": "send-birth-notification",
+							"typeCode": "56444-3",
+							"typeCodeDisplay": "Health communication document type",
+							"typeCodeSystem": "http://loinc.org"
+						}
+					}
+				}
 			]
 		},
 		{
@@ -89,22 +186,54 @@
 			"workflowStatusRequeted": "",
 			"payloadContainerTypes": "XD",
 			"patientContextRequired": "true",
+			"metadata": {
+				"XD": {
+					"availabilityStatus": "urn:oasis:names:tc:ebxml-regrep:StatusType:Approved",
+					"contentTypeCode": "send-discharge-notification",
+					"purpose": "send-discharge-notification",
+					"title": "Discharge Notification",
+					"referenceIdContextTypes": ["pregnancy", "visit", "request"]
+				}
+			},
 			"payloadContents": [
 				{
 					"name": "HL7 Version 2 notification",
 					"required": "true",
-					"mimeType": "text/hl7v2"
+					"mimeType": "text/hl7v2",
+					"metadata": {
+						"XD": {
+							"classCode": "send-discharge-notification",
+							"typeCode": "send-discharge-notification",
+							"typeCodeDisplay": "Discharge notification"
+						}
+					}
 				},
 				{
 					"name": "Human-readable healthcare communication",
 					"required": "true",
-					"mimeType": "text/plain"
+					"mimeType": "text/plain",
+					"metadata": {
+						"XD": {
+							"classCode": "send-discharge-notification",
+							"typeCode": "56444-3",
+							"typeCodeDisplay": "Health communication document type",
+							"typeCodeSystem": "http://loinc.org"
+						}
+					}
 				},
 				{
 					"name": "HTML healthcare communication",
 					"required": "false",
-					"mimeType": "text/html"
-				}			
+					"mimeType": "text/html",
+					"metadata": {
+						"XD": {
+							"classCode": "send-discharge-notification",
+							"typeCode": "56444-3",
+							"typeCodeDisplay": "Health communication document type",
+							"typeCodeSystem": "http://loinc.org"
+						}
+					}
+				}
 			]
 		},
 		{
@@ -115,14 +244,28 @@
 			"workflowStatusRequeted": "",
 			"payloadContainerTypes": "XD",
 			"patientContextRequired": "true",
+			"metadata": {
+				"XD": {
+					"availabilityStatus": "urn:oasis:names:tc:ebxml-regrep:StatusType:Approved",
+					"contentTypeCode": "send-documents",
+					"purpose": "send-documents",
+					"title": "Maternal Health Documents",
+					"referenceIdContextTypes": ["pregnancy", "visit", "request"]
+				}
+			},
 			"payloadContents": [
 				{
 					"name": "HL7 CDA Document",
 					"required": "true",
-					"mimeType": "application/xml+cda"
-				}		
+					"mimeType": "application/xml+cda",
+					"metadata": {
+						"XD": {
+							"classCode": "send-documents"
+						}
+					}
+				}
 			]
-		},	
+		},
 		{
 			"name": "send-workflow-status",
 			"description": "Communicates workflow status for a previously initiated transaction",
@@ -131,23 +274,56 @@
 			"workflowStatusRequeted": "",
 			"payloadContainerTypes": "XD",
 			"patientContextRequired": "true",
+			"metadata": {
+				"XD": {
+					"availabilityStatus": "urn:oasis:names:tc:ebxml-regrep:StatusType:Approved",
+					"contentTypeCode": "send-workflow-status",
+					"purpose": "send-workflow-status",
+					"title": "Workflow Status",
+					"referenceIdCorrelation": "originatingSubmissionSetUniqueId"
+				}
+			},
 			"payloadContents": [
 				{
 					"name": "FHIR Task workflow-status payload",
 					"required": "true",
-					"mimeType": "application/fhir+xml"
+					"mimeType": "application/fhir+xml",
+					"metadata": {
+						"XD": {
+							"classCode": "send-workflow-status",
+							"typeCode": "Task",
+							"typeCodeDisplay": "FHIR Task",
+							"typeCodeSystem": "http://hl7.org/fhir/resource-types"
+						}
+					}
 				},
 				{
 					"name": "Human-readable healthcare communication",
 					"required": "true",
-					"mimeType": "text/plain"
+					"mimeType": "text/plain",
+					"metadata": {
+						"XD": {
+							"classCode": "send-workflow-status",
+							"typeCode": "56444-3",
+							"typeCodeDisplay": "Health communication document type",
+							"typeCodeSystem": "http://loinc.org"
+						}
+					}
 				},
 				{
 					"name": "HTML healthcare communication",
 					"required": "false",
-					"mimeType": "text/html"
-				}			
+					"mimeType": "text/html",
+					"metadata": {
+						"XD": {
+							"classCode": "send-workflow-status",
+							"typeCode": "56444-3",
+							"typeCodeDisplay": "Health communication document type",
+							"typeCodeSystem": "http://loinc.org"
+						}
+					}
+				}
 			]
-		}			
+		}
 	]
 }
