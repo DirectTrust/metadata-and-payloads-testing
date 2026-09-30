@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admission Notification - Maternal Health (Labor and Delivery)</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; margin: 2em; color: #222; }
+  h1 { font-size: 1.4em; }
+  h2 { font-size: 1.1em; border-bottom: 1px solid #999; padding-bottom: 2px; margin-top: 1.5em; }
+  table { border-collapse: collapse; }
+  th { text-align: left; padding: 3px 16px 3px 0; vertical-align: top; font-weight: bold; }
+  td { padding: 3px 0; }
+  .notice { margin-top: 2em; font-size: 0.85em; color: #555; }
+</style>
+</head>
+<body>
+<h1>Admission Notification - Maternal Health (Labor and Delivery)</h1>
+<p>This message notifies you that the patient below has been admitted to the hospital for labor and delivery.
+A machine-processable HL7 v2 notification (ADT^A01) is included in this package.</p>
+
+<h2>Patient</h2>
+<table>
+  <tr><th>Name</th><td>Sarah A. Miller</td></tr>
+  <tr><th>Date of Birth</th><td>1995-04-23</td></tr>
+  <tr><th>Sex</th><td>Female</td></tr>
+  <tr><th>Patient ID</th><td>13450148 (Sunrise OB/GYN Clinic MRN)</td></tr>
+</table>
+
+<h2>Admission</h2>
+<table>
+  <tr><th>Patient Class</th><td>Inpatient</td></tr>
+  <tr><th>Visit Number</th><td>V20260925001</td></tr>
+  <tr><th>Admission Date</th><td>2026-09-25</td></tr>
+  <tr><th>Admission Time</th><td>6:00 AM</td></tr>
+  <tr><th>Location</th><td>Birthing Hospital - Labor and Delivery</td></tr>
+  <tr><th>Provider</th><td>Ellen Ross, MD (Obstetrics)</td></tr>
+  <tr><th>Reason</th><td>Labor and delivery (ICD-10-CM O80)</td></tr>
+</table>
+
+<h2>Pregnancy Context</h2>
+<table>
+  <tr><th>Pregnancy Episode ID</th><td>EP-20260107-13450148</td></tr>
+  <tr><th>Gestational Age at Admission</th><td>39 weeks</td></tr>
+  <tr><th>Estimated Delivery Date</th><td>2026-09-29</td></tr>
+</table>
+
+<h2>Sender / Recipient</h2>
+<table>
+  <tr><th>Sender</th><td>Birthing Hospital</td></tr>
+  <tr><th>Recipient</th><td>Sunrise OB/GYN Clinic</td></tr>
+</table>
+
+<h2>Transaction</h2>
+<table>
+  <tr><th>Use Case</th><td>cc-maternal-health-birth</td></tr>
+  <tr><th>Transaction</th><td>send-admission-notification</td></tr>
+  <tr><th>Purpose</th><td>Treatment / care coordination</td></tr>
+</table>
+
+<p class="notice">CONFIDENTIALITY NOTICE: This message contains protected health information intended only for the named recipient.
+If you received it in error, please notify the sender and delete it.</p>
+</body>
+</html>

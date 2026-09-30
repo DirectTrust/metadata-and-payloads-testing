@@ -1,0 +1,39 @@
+ADMISSION NOTIFICATION - MATERNAL HEALTH (LABOR AND DELIVERY)
+
+This message notifies you that the patient below has been admitted to the
+hospital for labor and delivery. A machine-processable HL7 v2 notification
+(ADT^A01) is included in this package.
+
+PATIENT
+  Name:            Sarah A. Miller
+  Date of Birth:   1995-04-23
+  Sex:             Female
+  Patient ID:      13450148 (Sunrise OB/GYN Clinic MRN)
+
+ADMISSION
+  Patient Class:   Inpatient
+  Visit Number:    V20260925001
+  Admission Date:  2026-09-25
+  Admission Time:  6:00 AM
+  Location:        Birthing Hospital - Labor and Delivery
+  Provider:        Ellen Ross, MD (Obstetrics)
+  Reason:          Labor and delivery (ICD-10-CM O80)
+
+PREGNANCY CONTEXT
+  Pregnancy Episode ID:        EP-20260107-13450148
+  Gestational Age at Admission: 39 weeks
+  Estimated Delivery Date:     2026-09-29
+
+SENDER
+  Birthing Hospital
+
+RECIPIENT
+  Sunrise OB/GYN Clinic
+
+Use Case:     cc-maternal-health-birth
+Transaction:  send-admission-notification
+Purpose:      Treatment / care coordination
+
+CONFIDENTIALITY NOTICE: This message contains protected health information
+intended only for the named recipient. If you received it in error, please
+notify the sender and delete it.
