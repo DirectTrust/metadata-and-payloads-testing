@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Discharge Notification - Maternal Health (Postpartum)</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; margin: 2em; color: #222; }
+  h1 { font-size: 1.4em; }
+  h2 { font-size: 1.1em; border-bottom: 1px solid #999; padding-bottom: 2px; margin-top: 1.5em; }
+  table { border-collapse: collapse; }
+  th { text-align: left; padding: 3px 16px 3px 0; vertical-align: top; font-weight: bold; }
+  td { padding: 3px 0; }
+  .notice { margin-top: 2em; font-size: 0.85em; color: #555; }
+</style>
+</head>
+<body>
+<h1>Discharge Notification - Maternal Health (Postpartum)</h1>
+<p>This message notifies you that the patient below has been discharged from the hospital following labor and delivery.
+A machine-processable HL7 v2 notification (ADT^A03) is included in this package.</p>
+
+<h2>Patient</h2>
+<table>
+  <tr><th>Name</th><td>Sarah A. Miller</td></tr>
+  <tr><th>Date of Birth</th><td>1995-04-23</td></tr>
+  <tr><th>Sex</th><td>Female</td></tr>
+  <tr><th>Patient ID</th><td>13450148 (Sunrise OB/GYN Clinic MRN)</td></tr>
+</table>
+
+<h2>Stay</h2>
+<table>
+  <tr><th>Patient Class</th><td>Inpatient</td></tr>
+  <tr><th>Visit Number</th><td>V20260925001</td></tr>
+  <tr><th>Admission</th><td>2026-09-25 6:00 AM</td></tr>
+  <tr><th>Discharge</th><td>2026-09-27 11:00 AM</td></tr>
+  <tr><th>Location</th><td>Birthing Hospital - Labor and Delivery</td></tr>
+  <tr><th>Provider</th><td>Ellen Ross, MD (Obstetrics)</td></tr>
+  <tr><th>Discharge Disposition</th><td>Discharged to home or self care</td></tr>
+  <tr><th>Diagnosis</th><td>Full-term uncomplicated delivery (ICD-10-CM O80)</td></tr>
+</table>
+
+<h2>Delivery</h2>
+<p>A daughter, Rylie S. Miller, was born 2026-09-25 at 8:42 AM.<br>Postpartum follow-up with the sending prenatal clinic is recommended.</p>
+
+<h2>Pregnancy Context</h2>
+<table>
+  <tr><th>Pregnancy Episode ID</th><td>EP-20260107-13450148</td></tr>
+</table>
+
+<h2>Sender / Recipient</h2>
+<table>
+  <tr><th>Sender</th><td>Birthing Hospital</td></tr>
+  <tr><th>Recipient</th><td>Sunrise OB/GYN Clinic</td></tr>
+</table>
+
+<h2>Transaction</h2>
+<table>
+  <tr><th>Use Case</th><td>cc-maternal-health-birth</td></tr>
+  <tr><th>Transaction</th><td>send-discharge-notification</td></tr>
+  <tr><th>Purpose</th><td>Treatment / care coordination</td></tr>
+</table>
+
+<p class="notice">CONFIDENTIALITY NOTICE: This message contains protected health information intended only for the named recipient.
+If you received it in error, please notify the sender and delete it.</p>
+</body>
+</html>

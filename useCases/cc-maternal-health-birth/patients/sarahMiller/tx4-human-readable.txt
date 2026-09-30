@@ -1,0 +1,42 @@
+DISCHARGE NOTIFICATION - MATERNAL HEALTH (POSTPARTUM)
+
+This message notifies you that the patient below has been discharged from the
+hospital following labor and delivery. A machine-processable HL7 v2
+notification (ADT^A03) is included in this package.
+
+PATIENT
+  Name:            Sarah A. Miller
+  Date of Birth:   1995-04-23
+  Sex:             Female
+  Patient ID:      13450148 (Sunrise OB/GYN Clinic MRN)
+
+STAY
+  Patient Class:       Inpatient
+  Visit Number:        V20260925001
+  Admission:           2026-09-25 6:00 AM
+  Discharge:           2026-09-27 11:00 AM
+  Location:            Birthing Hospital - Labor and Delivery
+  Provider:            Ellen Ross, MD (Obstetrics)
+  Discharge Disposition: Discharged to home or self care
+  Diagnosis:           Full-term uncomplicated delivery (ICD-10-CM O80)
+
+DELIVERY
+  A daughter, Rylie S. Miller, was born 2026-09-25 at 8:42 AM.
+  Postpartum follow-up with the sending prenatal clinic is recommended.
+
+PREGNANCY CONTEXT
+  Pregnancy Episode ID:  EP-20260107-13450148
+
+SENDER
+  Birthing Hospital
+
+RECIPIENT
+  Sunrise OB/GYN Clinic
+
+Use Case:     cc-maternal-health-birth
+Transaction:  send-discharge-notification
+Purpose:      Treatment / care coordination
+
+CONFIDENTIALITY NOTICE: This message contains protected health information
+intended only for the named recipient. If you received it in error, please
+notify the sender and delete it.
