@@ -10,42 +10,6 @@
 	},
 	"transactions": [
 		{
-			"name": "send-outpatient-visit-notification",
-			"payloadContents": [
-				{
-					"name": "HL7 V2 Outpatient Visit Notification",
-					"contentFile": "tx1-notif.txt"
-
-				},
-				{
-					"name": "Human-readable healthcare communication",
-					"contentFile": "tx1-human-readable.txt"
-				},
-				{
-					"name": "HTML healthcare communication",
-					"contentFile": "tx1-human-readable.html"
-				}			
-			]
-		},
-		{
-			"name": "send-admission-notification",
-			"payloadContents": [
-				{
-					"name": "HL7 V2 Outpatient Visit Notification",
-					"contentFile": "tx2-notif.txt"
-
-				},
-				{
-					"name": "Human-readable healthcare communication",
-					"contentFile": "tx2-human-readable.txt"
-				},
-				{
-					"name": "HTML healthcare communication",
-					"contentFile": "tx2-human-readable.html"
-				}			
-			]
-		},
-		{
 			"name": "send-birth-notification",
 			"payloadContents": [
 				{
@@ -63,24 +27,6 @@
 				}			
 			]
 		},
-		{
-			"name": "send-discharge-notification",
-			"payloadContents": [
-				{
-					"name": "HL7 Version 2 notification",
-					"contentFile": "tx4-notif.txt"
-
-				},
-				{
-					"name": "Human-readable healthcare communication",
-					"contentFile": "tx4-human-readable.txt"
-				},
-				{
-					"name": "HTML healthcare communication",
-					"contentFile": "tx4-human-readable.html"
-				}			
-			]
-		},	
 		{
 			"name": "send-documents",
 			"payloadContents": [
