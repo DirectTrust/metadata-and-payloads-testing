@@ -35,6 +35,19 @@
 					}
 				},
 				{
+					"name": "Workflow Activity Task",
+					"required": "true",
+					"mimeType": "application/fhir+xml",
+					"metadata": {
+						"XD": {
+							"classCode": "send-outpatient-visit-notification",
+							"typeCode": "Task",
+							"typeCodeDisplay": "FHIR Task",
+							"typeCodeSystem": "http://hl7.org/fhir/resource-types"
+						}
+					}
+				},
+				{
 					"name": "Human-readable healthcare communication",
 					"required": "true",
 					"mimeType": "text/plain",

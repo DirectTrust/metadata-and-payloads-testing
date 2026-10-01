@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Task xmlns="http://hl7.org/fhir">
+  <id value="tx1-20260818-0001"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.19.5.99999.1.20260818.1"/>
+  </identifier>
+  <status value="requested"/>
+  <intent value="order"/>
+  <priority value="routine"/>
+  <code>
+    <coding>
+      <system value="urn:dt-org:dsm:purpose"/>
+      <code value="send-outpatient-visit-notification"/>
+      <display value="Send Outpatient Visit Notification"/>
+    </coding>
+  </code>
+  <description value="Process the information in the Payload in the intended workflow. On successful processing, report Payload Receipt to the Workflow Status Endpoint."/>
+  <for>
+    <identifier>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+          <code value="MR"/>
+        </coding>
+      </type>
+      <system value="urn:oid:2.16.840.1.113883.19.5.99999.1"/>
+      <value value="13450148"/>
+    </identifier>
+    <display value="Sarah A. Miller"/>
+  </for>
+  <authoredOn value="2026-08-18T11:45:00-04:00"/>
+  <requester>
+    <display value="Sunrise OB/GYN Clinic"/>
+  </requester>
+  <input>
+    <type>
+      <coding>
+        <system value="urn:dt-org:dsm:task-input"/>
+        <code value="workflow-status-endpoint"/>
+        <display value="Workflow Status Endpoint"/>
+      </coding>
+    </type>
+    <valueUrl value="mailto:workflow-status@sunriseob.direct.example.org"/>
+  </input>
+  <input>
+    <type>
+      <coding>
+        <system value="urn:dt-org:dsm:task-input"/>
+        <code value="workflow-status-report"/>
+        <display value="Workflow Status Reporting Instruction"/>
+      </coding>
+    </type>
+    <valueString value="Report successful Payload Receipt to the Workflow Status Endpoint using send-workflow-status."/>
+  </input>
+  <input>
+    <type>
+      <coding>
+        <system value="urn:dt-org:dsm:task-input"/>
+        <code value="workflow-action"/>
+        <display value="Workflow Action"/>
+      </coding>
+    </type>
+    <valueString value="Process the information in the Payload in the intended workflow."/>
+  </input>
+</Task>

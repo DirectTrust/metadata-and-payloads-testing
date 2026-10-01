@@ -18,6 +18,10 @@
 
 				},
 				{
+					"name": "Workflow Activity Task",
+					"contentFile": "tx1-task.xml"
+				},
+				{
 					"name": "Human-readable healthcare communication",
 					"contentFile": "tx1-human-readable.txt"
 				},
