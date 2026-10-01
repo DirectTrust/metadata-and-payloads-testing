@@ -1,41 +1,101 @@
-OUTPATIENT VISIT NOTIFICATION - MATERNAL HEALTH (PRENATAL)
+==============================================================================
+PAYLOAD-APPROPRIATE HUMAN-READABLE INFORMATION
+==============================================================================
 
-This message notifies you that a prenatal outpatient visit has been completed
-for the patient below. A machine-processable HL7 v2 notification (ADT^A03) is
-included in this package.
+TRANSACTION
+------------------------------------------------------------------------------
+Use Case:                    Maternal Health - Birth (cc-maternal-health-birth)
+Transaction:                 Send Outpatient Visit Notification (send-outpatient-visit-notification)
+Content Creator:             Sunrise OB/GYN Clinic
+Content Consumer(s):         Birthing Hospital <intake@direct.birthinghospital.example.org>
+Patient:                     Sarah A. Miller - 13450148
+Workflow:                    Workflow status updates requested to maternal.health@direct.sunriseob.example.org
+
+PAYLOAD PROCESSING PURPOSE
+------------------------------------------------------------------------------
+Process the Send Outpatient Visit Notification payload for Sarah A. Miller. The requested FHIR Task carries the workflow activity; the HL7 V2 message carries the event notification; this human-readable view presents the payload as a cohesive information collection.
+
+PAYLOAD CONTENTS
+------------------------------------------------------------------------------
+1  Workflow Activity Task                          application/fhir+xml  tx1-task.xml
+2  HL7 V2 event notification                       text/hl7v2            tx1-notif.txt
+3  Payload-appropriate human-readable information  text/plain            tx1-human-readable.txt
+4  Payload-appropriate human-readable information  text/html             tx1-human-readable.html
+
+HL7 V2 EVENT INFORMATION
+------------------------------------------------------------------------------
+==============================================================================
+OUTPATIENT VISIT COMPLETION NOTIFICATION
+==============================================================================
+Human-readable HL7 v2 event notification
+
+QUICK FACTS
+------------------------------------------------------------------------------
+Event time:                  August 18, 2026, 11:30 AM EDT
+Patient class:               O (Outpatient)
+Duration:                    1 hour 30 minutes
+Facility:                    Sunrise OB/GYN Clinic
 
 PATIENT
-  Name:            Sarah A. Miller
-  Date of Birth:   1995-04-23
-  Sex:             Female
-  Patient ID:      13450148 (Sunrise OB/GYN Clinic MRN)
+------------------------------------------------------------------------------
+Name:                        Sarah A. Miller
+Date of birth:               April 23, 1995
+Administrative sex:          Female
+Race:                        White
+Marital status:              Married
+Primary language:            English
+Address:                     742 Maple Street, Columbus, OH, 43215, US
+Phone:                       (614) 555-0142
 
-VISIT
-  Visit Type:      Outpatient - prenatal visit
-  Visit Number:    V20260818001
-  Date:            2026-08-18
-  Start Time:      10:00 AM
-  End Time:        11:30 AM
-  Location:        Sunrise OB/GYN Clinic
-  Provider:        Dana M. Hall, MD (Obstetrics)
+PATIENT IDENTIFIERS
+------------------------------------------------------------------------------
+MRN:                         13450148
+MRN assigning authority:     SUNRISEOB (2.16.840.1.113883.19.5.99999.1)
+
+FACILITY LOCATION
+------------------------------------------------------------------------------
+Treating facility:           Sunrise OB/GYN Clinic
+Point of care:               OBCLIN
+Location type:               C
+Facility Direct address:     maternal.health@direct.sunriseob.example.org
+
+ENCOUNTER
+------------------------------------------------------------------------------
+Visit purpose:               Prenatal outpatient visit
+Visit number:                V20260818001
+Hospital service:            OB
+Start:                       August 18, 2026, 10:00 AM EDT
+End:                         August 18, 2026, 11:30 AM EDT
+Disposition:                 01
+
+RESPONSIBLE PROVIDER
+------------------------------------------------------------------------------
+Provider:                    Dana M. Hall, MD
+NPI:                         1234567893
+Role:                        Attending provider
+Direct address:              dana.hall@direct.sunriseob.example.org
 
 PREGNANCY CONTEXT
-  Pregnancy Episode ID:        EP-20260107-13450148
-  Diagnosis:                   Supervision of normal pregnancy, third
-                               trimester (ICD-10-CM Z34.03)
-  Gestational Age at Visit:    34 weeks
-  Estimated Delivery Date:     2026-09-29
+------------------------------------------------------------------------------
+Perinatal context:           EP-20260107-13450148
+Context type:                Perinatal Episode
+Context assigning authority: SUNRISEOB (2.16.840.1.113883.19.5.99999.1)
+Diagnosis:                   Supervision of normal pregnancy, third trimester (ICD-10-CM Z34.03)
+Gestational age at visit:    34 weeks
+Estimated delivery date:     September 29, 2026
 
-SENDER
-  Sunrise OB/GYN Clinic
+NOTIFICATION AND ROUTING
+------------------------------------------------------------------------------
+Message type:                ADT^A03^ADT_A03
+Notification type:           98145-6 Outpatient Visit notification
+Sending application:         SUNRISE_EHR
+Sending organization:        SUNRISE OB/GYN CLINIC
+Receiving application:       DTDIRECT_RECIPIENT
+Receiving organization:      BIRTHING HOSPITAL
+Message timestamp:           August 18, 2026, 11:45 AM EDT
+Control ID:                  MSG20260818-0001
+HL7 version:                 2.5.1
 
-RECIPIENT
-  Birthing Hospital
+This text is a derived view. The HL7 v2 message remains authoritative.
 
-Use Case:     cc-maternal-health-birth
-Transaction:  send-outpatient-visit-notification
-Purpose:      Treatment / care coordination
-
-CONFIDENTIALITY NOTICE: This message contains protected health information
-intended only for the named recipient. If you received it in error, please
-notify the sender and delete it.
+CONFIDENTIALITY NOTICE: This message contains protected health information intended only for the named recipient. If you received it in error, please notify the sender and delete it.

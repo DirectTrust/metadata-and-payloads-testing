@@ -2,6 +2,11 @@ MSH|^~\&|SUNRISE_EHR|SUNRISE OB/GYN CLINIC^2.16.840.1.113883.19.5.99999.1^ISO|DT
 EVN|A03|20260818114500-0400||01|1234567893^Hall^Dana^M^^^MD^^^^^^^NPI|20260818113000-0400
 PID|1||13450148^^^SUNRISEOB&2.16.840.1.113883.19.5.99999.1&ISO^MR||Miller^Sarah^A^^^^L||19950423|F||2106-3^White^HL70005|742 Maple Street^^Columbus^OH^43215^USA^H||^PRN^PH^^1^614^5550142||en^English^ISO639|M^Married^HL70002
 PV1|1|O|OBCLIN^^^SUNRISEOB^^C^^^Sunrise OB/GYN Clinic|R|||1234567893^Hall^Dana^M^^^MD^^^^^^^NPI|||OB||||1|||1234567893^Hall^Dana^M^^^MD^^^^^^^NPI||V20260818001^^^SUNRISEOB&2.16.840.1.113883.19.5.99999.1&ISO^VN|||||||||||||||||01||||||||20260818100000|20260818113000|||||EP-20260107-13450148^^^SUNRISEOB^AN
+ROL|1|AD|AT^Attending provider^HL70443|1234567893^Hall^Dana^M^^^MD^^^^^^^NPI|20260818100000-0400|20260818113000-0400||||||^DSM^Internet^dana.hall@direct.sunriseob.example.org
+ROL|2|AD|TF^Treating Facility^L|SUNRISEOB^Sunrise OB/GYN Clinic|20260818100000-0400|20260818113000-0400||||||^DSM^Internet^maternal.health@direct.sunriseob.example.org
 DG1|1||Z34.03^Encounter for supervision of normal pregnancy, third trimester^ICD10CM||20260818|W
 OBX|1|NM|18185-9^Gestational age^LN||34|wk^weeks^UCUM|||||F|||20260818100000-0400
 OBX|2|ST|11778-8^Delivery date Estimated^LN||20260929||||||F|||20260818100000-0400
+OBX|3|CWE|EVENTTYPE^Event notification type^L||98145-6^Outpatient Visit notification^LN||||||F|||20260818100000-0400
+OBX|4|EI|PERICTXID^Perinatal Context Instance Identifier^L||EP-20260107-13450148^SUNRISEOB^2.16.840.1.113883.19.5.99999.1^ISO||||||F|||20260818100000-0400
+OBX|5|CWE|PERICTXTYPE^Perinatal Context Instance Type^L||urn:dt-org:dsm:map:2025:perinatal^Perinatal Episode^L||||||F|||20260818100000-0400
