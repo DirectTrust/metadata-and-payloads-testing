@@ -2,6 +2,13 @@
 	"useCaseName": "cc-maternal-health-birth",
 	"useCaseDisplayName": "Maternal Health – Birth",
 
+	"contextIdentifierTypes": {
+		"perinatal": "urn:dt-org:dsm:map:2025:perinatal",
+		"pregnancy": "urn:dt-org:dsm:map:2025:pregnancy",
+		"visit": "urn:dt-org:dsm:map:2026:visit",
+		"request": "urn:dt-org:dsm:map:2025:request"
+	},
+
 	"transactions": [
 		{
 			"name": "send-outpatient-visit-notification",
@@ -14,10 +21,11 @@
 			"metadata": {
 				"XD": {
 					"availabilityStatus": "urn:oasis:names:tc:ebxml-regrep:StatusType:Approved",
-					"contentTypeCode": "send-outpatient-visit-notification",
 					"purpose": "send-outpatient-visit-notification",
+					"purposeDisplay": "Send Outpatient Visit Notification",
+					"purposeSystem": "http://objects.directtrust.org/standards/terminology/CodeSystem/TransactionTypesCS",
 					"title": "Outpatient Visit Notification",
-					"referenceIdContextTypes": ["pregnancy", "visit"]
+					"referenceIdContextTypes": ["perinatal", "visit"]
 				}
 			},
 			"payloadContents": [
@@ -27,10 +35,20 @@
 					"mimeType": "text/hl7v2",
 					"metadata": {
 						"XD": {
-							"classCode": "send-outpatient-visit-notification",
+							"title": "Outpatient Visit notification",
+							"principal": true,
+							"classCode": "86530-3",
+							"classCodeDisplay": "Hospital notification",
+							"classCodeSystem": "http://loinc.org",
 							"typeCode": "98145-6",
 							"typeCodeDisplay": "Outpatient Visit notification",
-							"typeCodeSystem": "http://loinc.org"
+							"typeCodeSystem": "http://loinc.org",
+							"formatCode": "urn:ihe:pcc:hl7+NOD:ADT:A03:2.5.1",
+							"formatCodeDisplay": "HL7 V2 ADT notification",
+							"formatCodeSystem": "1.3.6.1.4.1.19376.1.2.3",
+							"confidentialityCode": "N",
+							"confidentialityCodeDisplay": "Normal",
+							"confidentialityCodeSystem": "2.16.840.1.113883.5.25"
 						}
 					}
 				},
@@ -40,10 +58,19 @@
 					"mimeType": "application/fhir+xml",
 					"metadata": {
 						"XD": {
-							"classCode": "send-outpatient-visit-notification",
-							"typeCode": "Task",
-							"typeCodeDisplay": "FHIR Task",
-							"typeCodeSystem": "http://hl7.org/fhir/resource-types"
+							"title": "Workflow Activity Task",
+							"classCode": "Task",
+							"classCodeDisplay": "FHIR Task",
+							"classCodeSystem": "http://hl7.org/fhir/resource-types",
+							"typeCode": "requested",
+							"typeCodeDisplay": "Requested",
+							"typeCodeSystem": "http://hl7.org/fhir/task-status",
+							"formatCode": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+							"formatCodeDisplay": "mimeType Sufficient",
+							"formatCodeSystem": "1.3.6.1.4.1.19376.1.2.3",
+							"confidentialityCode": "N",
+							"confidentialityCodeDisplay": "Normal",
+							"confidentialityCodeSystem": "2.16.840.1.113883.5.25"
 						}
 					}
 				},
@@ -53,10 +80,19 @@
 					"mimeType": "text/plain",
 					"metadata": {
 						"XD": {
-							"classCode": "send-outpatient-visit-notification",
+							"title": "Payload-appropriate Human-readable Information",
+							"classCode": "56444-3",
+							"classCodeDisplay": "Healthcare communication",
+							"classCodeSystem": "http://loinc.org",
 							"typeCode": "56444-3",
-							"typeCodeDisplay": "Health communication document type",
-							"typeCodeSystem": "http://loinc.org"
+							"typeCodeDisplay": "Healthcare communication",
+							"typeCodeSystem": "http://loinc.org",
+							"formatCode": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+							"formatCodeDisplay": "mimeType Sufficient",
+							"formatCodeSystem": "1.3.6.1.4.1.19376.1.2.3",
+							"confidentialityCode": "N",
+							"confidentialityCodeDisplay": "Normal",
+							"confidentialityCodeSystem": "2.16.840.1.113883.5.25"
 						}
 					}
 				},
@@ -66,10 +102,19 @@
 					"mimeType": "text/html",
 					"metadata": {
 						"XD": {
-							"classCode": "send-outpatient-visit-notification",
+							"title": "Payload-appropriate Human-readable Information",
+							"classCode": "56444-3",
+							"classCodeDisplay": "Healthcare communication",
+							"classCodeSystem": "http://loinc.org",
 							"typeCode": "56444-3",
-							"typeCodeDisplay": "Health communication document type",
-							"typeCodeSystem": "http://loinc.org"
+							"typeCodeDisplay": "Healthcare communication",
+							"typeCodeSystem": "http://loinc.org",
+							"formatCode": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+							"formatCodeDisplay": "mimeType Sufficient",
+							"formatCodeSystem": "1.3.6.1.4.1.19376.1.2.3",
+							"confidentialityCode": "N",
+							"confidentialityCodeDisplay": "Normal",
+							"confidentialityCodeSystem": "2.16.840.1.113883.5.25"
 						}
 					}
 				}
