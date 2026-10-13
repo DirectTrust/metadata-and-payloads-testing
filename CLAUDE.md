@@ -4,28 +4,24 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Data-only repository: sample transactions, patients, and payload content for DirectTrust Metadata and Payloads Framework use cases. There is no build, lint, or test tooling. The files are consumed by external tooling (e.g. the accreditation testing tools) and must stay consistent with the published implementation guides, e.g. https://directtrust.github.io/cc-maternal-health-birth/.
+Data-only repository: sample use cases, patients, and payload content for DirectTrust Metadata and Payloads Framework use cases. There is no build, lint, or test tooling. The files are cloned and consumed by the accreditation testing tools (`accreditation-testing-backend`, which pulls this repository at startup, hourly, and on an admin's request) and must stay consistent with the published implementation guides, e.g. https://directtrust.github.io/cc-maternal-health-birth/.
+
+**README.md is the reference for the data format** (`useCase.json`, `patient.json`, scenarios, per-document XD metadata, and the patient-over-use-case precedence rule). Keep it in sync with any schema change here and in the backend's `MetaAndPayloadUseCase` records.
 
 ## Structure
 
 `useCases/<useCaseName>/`
-- `useCase.json` — defines the use case's transactions (name, `metadataTypeCode`, `purpose`, `payloadContainerTypes`, and the list of `payloadContents` with `mimeType` and `required`). See "XD submission-set and document metadata" below for the `metadata` field.
-- `patients/<patientName>/patient.json` — one test patient: `patientId`, `demographics` (`firstName`, `lastName`, `fullName`, `dob`, `gender`), and the transactions that patient participates in. Each transaction's `payloadContents` entries map a payload `name` to a `contentFile`.
-- Content files (`tx1-notif.txt`, `tx1-human-readable.txt`, `tx1-human-readable.html`, ...) live in the same directory as the patient's `patient.json`.
+- `useCase.json` — use case name, `contextIdentifierTypes`, and `transactions` (each with `metadataTypeCode`, `purpose`, `payloadContainerTypes`, transaction-level `metadata.XD`, and `payloadContents` with `mimeType`, `required` and document-level `metadata.XD`).
+- `patients/<patientDir>/patient.json` — one test patient: `patientId`, `demographics`, and `scenarios` (each a `name` plus its own `transactions`; each transaction's `payloadContents` maps a document `name` to a `contentFile`, optionally with `mimeType` and `metadata.XD`).
+- Content files live in the same directory as the patient's `patient.json`.
 
-## XD submission-set and document metadata
+## Rules to keep when editing
 
-Each transaction in `useCase.json` may carry a `metadata` object keyed by payload container type (only `XD` exists today — other container types would get their own sibling key, e.g. `metadata.FHIR`, if/when added):
-
-- **Transaction level** (`transaction.metadata.XD`) — the static portion of the IHE XDS SubmissionSet for that transaction: `availabilityStatus` (fixed), `contentTypeCode`/`purpose` (the canonical transaction code, per the Metadata and Payload Framework's SubmissionSet.purpose extension — SHALL match the transaction `name`), `title`, and `referenceIdContextTypes` (the Context Instance identifier types the transaction carries, e.g. `pregnancy`, `visit`). TX8 (`send-workflow-status`) uses `referenceIdCorrelation: "originatingSubmissionSetUniqueId"` instead, since its referenceIdList is the initiating transaction's `SubmissionSet.uniqueId`, not a static context type.
-- **Document level** (`payloadContents[].metadata.XD`) — the static portion of that item's XDS DocumentEntry: `classCode` (always equal to the transaction's `contentTypeCode`), and, where the implementation guide defines one, `typeCode`/`typeCodeDisplay`/`typeCodeSystem`.
-- **Deliberately excluded**: anything the implementation guide marks as runtime/instance data rather than a fixed use-case value — `uniqueId`, `entryUUID`, `submissionTime`, `intendedRecipient`, `patientId`, `sourcePatientId`/`sourcePatientInfo`, `author`, `hash`, `size` — these come from the actual sender/recipient/patient/content at test-run time, not from this repo. `formatCode`, `confidentialityCode`, `healthcareFacilityTypeCode`, and `practiceSettingCode` are also omitted: the guide leaves `formatCode` "TBD" for every document type used here, and the other three are guide text that says to populate from the sending HISP's own facility/event data, not a fixed use-case value — a consuming builder should fall back to synthetic/configured defaults for those.
-- **Source and confidence**: values come from https://directtrust.github.io/cc-maternal-health-birth/tx1-... through .../tx8-send-workflow-status. Where the guide gives an explicit value (e.g. TX1's `98145-6` LOINC typeCode, TX8's FHIR `Task` typeCode) it's used verbatim. Where the guide only shows the pattern for one transaction (e.g. TX4 explicitly ties `56444-3` to the human-readable DocumentEntry) it's extrapolated to the structurally identical human-readable/HTML items in the other transactions — a reasonable best guess, not a guide-confirmed value for those specific transactions. TX3's CDA `typeCode` (`DT-Birth`) is explicitly called out by the guide as temporary, pending LOINC assignment. TX5's document has no `typeCode` at all in the guide, so none is set. Titles for TX2/TX4/TX5 replace unfilled template strings in the guide's own tables with constructed display names.
-
-## Conventions
-
-- Payload `name` values in `patient.json` must match the names in `useCase.json` for the same transaction. Not every patient has every transaction; `contentFile` names follow `tx<N>-...` (tx1 outpatient visit, tx2 admission, tx3 birth, tx4 discharge, tx5 documents, tx8 workflow status).
-- Content must agree with `patient.json`: the HL7 v2 PID uses `patientId` (PID-3), the name, DOB, and gender (HL7 Table 0001 code, e.g. `F`).
-- Each transaction's human-readable payload is a `.txt` plus an optional `.html` with the same content; HL7 v2 payloads are `.txt` (`text/hl7v2`), CDA payloads are `.xml`.
-- The tx1/tx2/tx4 HL7 v2 notifications are ADT messages (tx1 is ADT^A03 for an outpatient visit) and must carry a pregnancy episode context identifier with its assigning authority.
-- Identifiers, OIDs, addresses, and NPIs in sample content are made-up placeholders.
+- **The guide is the standard, and only TX1 is authoritative right now.** The other transactions in `useCase.json` are being revised; do not "fix" TX1 to match them, and do not present their codes as confirmed.
+- The format is *omit, don't default*: leave a code out rather than inventing a placeholder. Class/type/format/confidentiality codes classify the document (e.g. the CDA's LOINC `code`), not the transaction.
+- A patient's `metadata.XD` for a document overrides the use case's same-named fields for that patient; for a document the use case doesn't define it is the only source and the patient must give the document's `mimeType`. CDA is `application/cda+xml` (the IANA-registered type), not `application/xml+cda`.
+- Payload `name` values in `patient.json` match the use case's names for the same transaction (patient-only documents excepted). A patient is always required for a message; there is no patient-optional flag.
+- Content must agree with `patient.json`: HL7 v2 `PID-3` uses `patientId`, name, DOB and gender (HL7 Table 0001 code, e.g. `F`); a CDA's `recordTarget` agrees likewise.
+- Human-readable content is `.txt` (`text/plain`) with an optional `.html` twin; HL7 v2 is `.txt` (`text/hl7v2`); CDA is `.xml`.
+- tx1/tx2/tx4 HL7 v2 notifications are ADT messages (tx1 is ADT^A03) and carry the pregnancy episode context identifier with its assigning authority. Identifiers, OIDs, addresses, and NPIs in sample content are made-up placeholders.
+- Changing the shape of either JSON file requires the backend to understand it first (the backend has no fallback for old shapes), so coordinate the two.
