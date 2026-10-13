@@ -309,7 +309,7 @@
 			"payloadContents": [
 				{
 					"name": "HL7 CDA Document",
-					"required": "true",
+					"required": "false",
 					"mimeType": "application/xml+cda",
 					"metadata": {
 						"XD": {

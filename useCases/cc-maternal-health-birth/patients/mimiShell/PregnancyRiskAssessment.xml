@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type="text/xsl" href="../01_Shared_Rendering_Resources/CDA.xsl"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdtc="urn:hl7-org:sdtc" xsi:schemaLocation="urn:hl7-org:v3 ../00_CDA_SDTC_Schema/infrastructure/cda/CDA_SDTC.xsd"><realmCode code="US"/>
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+  <templateId root="2.16.840.1.113883.10.20.22.1.1"/><templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01"/><id root="2.25.300482169457150407075386186229743407818.2" extension="70f2f714-499b-4873-996e-b311cb5c0958"/><sdtc:category code="71482-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Risk assessment Document"/><code code="71482-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Risk assessment Document"/><title>Pregnancy Risk Assessment</title><effectiveTime value="20260326140700-0500"/><confidentialityCode code="V" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality" displayName="Very Restricted"/>
+  <languageCode code="en-US"/>
+  <setId root="2.25.300482169457150407075386186229743407818.2" extension="b695a723-59a6-4675-95b6-09f522053a3a"/><versionNumber value="1774552020002"/><recordTarget>
+    <patientRole>
+      <id root="2.25.300482169457150407075386186229743407818.1" extension="NTHS-00003007" assigningAuthorityName="Health Services of North Texas"/><id root="1.3.6.1.4.1.21367.13.20.1000" extension="IHERED-3007" assigningAuthorityName="IHE International"/><id root="2.16.840.1.113883.4.3.48" extension="TX-12345678" assigningAuthorityName="TX State Drivers License"/><sdtc:identifiedBy typeCode="REL">
+        <sdtc:alternateIdentification classCode="IDENT">
+          <sdtc:id root="2.16.840.1.113883.4.3.48" extension="TX-12345678"/>
+          <sdtc:code code="DL" codeSystem="2.16.840.1.113883.18.108" codeSystemName="v2-0203" displayName="Drivers license number"/>
+        </sdtc:alternateIdentification>
+      </sdtc:identifiedBy>
+      <addr use="HP">
+        <streetAddressLine>1200 Dallas Dr</streetAddressLine>
+        <city>Denton</city>
+        <state>TX</state>
+        <postalCode>76205</postalCode>
+        <country>US</country>
+      </addr>
+      <telecom use="MC" value="tel:+1-940-453-3711"/>
+      <telecom use="HP" value="tel:+1-940-320-5678"/>
+      <telecom use="H" value="mailto:mshell97@gmail.com"/>
+      <patient>
+        <name use="L">
+          <given>Mimi</given>
+          <given>Elena</given>
+          <family>Shell</family>
+        </name>
+        <administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" codeSystemName="AdministrativeGender" displayName="Female"/>
+        <birthTime value="19970810"/>
+        <raceCode code="2054-5" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp; Ethnicity - CDC" displayName="Black or African American"/>
+        <ethnicGroupCode code="2186-2" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp; Ethnicity - CDC" displayName="Not Hispanic or Latino"/>
+        <languageCommunication>
+          <languageCode code="en"/>
+          <preferenceInd value="true"/>
+        </languageCommunication>
+      </patient>
+    </patientRole>
+  </recordTarget>
+  <author>
+    <time value="20260326140700-0500"/>
+    <assignedAuthor>
+      <id root="2.16.840.1.113883.4.6" extension="1417947383" assigningAuthorityName="National Provider ID"/>
+      <code code="207V00000X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="Provider Taxonomy" displayName="Obstetrics - Gynecology Physician"/>
+      <sdtc:specialty code="394585009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Obstetrics and gynecology"/>
+      <addr use="WP">
+        <streetAddressLine>4304 Mesa Dr</streetAddressLine>
+        <city>Denton</city>
+        <state>TX</state>
+        <postalCode>76207</postalCode>
+        <country>US</country>
+      </addr>
+      <telecom use="WP" value="tel:+1-940-381-1501"/>
+      <telecom use="WP" value="mailto:S.M.Heps@hsnt.org"/>
+      <telecom use="WP" value="mailto:s.heps@direct.nths.example"/>
+      <assignedPerson>
+        <name>
+          <given>Simone</given>
+          <family>Heps</family>
+        </name>
+      </assignedPerson>
+      <representedOrganization>
+        <id root="2.25.300482169457150407075386186229743407818" assigningAuthorityName="NTHS"/><id root="2.16.840.1.113883.4.6" extension="1124538442"/>
+        <name>Health Services of North Texas</name>
+        <telecom use="WP" value="tel:+1-940-381-1501"/>
+        <telecom use="PUB" value="mailto:NTHSmaternalhealth@direct.interoplearninglab.net"/>
+        <addr use="WP">
+          <streetAddressLine>4304 Mesa Dr</streetAddressLine>
+          <city>Denton</city>
+          <state>TX</state>
+          <postalCode>76207</postalCode>
+          <country>US</country>
+        </addr>
+      </representedOrganization>
+    </assignedAuthor>
+  </author>
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id root="2.25.300482169457150407075386186229743407818" assigningAuthorityName="NTHS"/><id root="2.16.840.1.113883.4.6" extension="1124538442"/>
+        <name>Health Services of North Texas</name>
+        <telecom use="PUB" value="mailto:NTHSmaternalhealth@direct.interoplearninglab.net"/>
+        <addr use="WP">
+          <streetAddressLine>4304 Mesa Dr</streetAddressLine>
+          <city>Denton</city>
+          <state>TX</state>
+          <postalCode>76207</postalCode>
+          <country>US</country>
+        </addr>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <legalAuthenticator><time value="20260326140700-0500"/><signatureCode code="S"/><assignedEntity><id root="2.16.840.1.113883.4.6" extension="1417947383" assigningAuthorityName="National Provider ID"/>
+      </assignedEntity></legalAuthenticator><participant typeCode="IND">
+    <associatedEntity classCode="PRS">
+      <addr use="HP">
+        <streetAddressLine>1200 Dallas Dr</streetAddressLine>
+        <city>Denton</city>
+        <state>TX</state>
+        <postalCode>76205</postalCode>
+        <country>US</country>
+      </addr>
+      <telecom use="MC" value="tel:+1-940-453-1234"/>
+      <telecom use="HP" value="tel:+1-940-320-5678"/>
+      <telecom use="H" value="mailto:tcuric1234@gmail.com"/>
+      <associatedPerson>
+        <name>
+          <given>Thomas</given>
+          <family>Curic</family>
+        </name>
+        </associatedPerson>
+    </associatedEntity>
+  </participant>
+  <participant typeCode="DEV">
+    <functionCode code="assembler" codeSystem="2.16.840.1.113883.4.642.4.1131" codeSystemName="ProvenanceParticipationFunction"/>
+    <time value="20260326150700-0400"/>
+    <associatedEntity classCode="OWN">
+      <scopingOrganization>
+        <id root="2.16.840.1.113883.3.583"/>
+        <name use="L">eClinicalWorks</name>
+        <telecom value="tel:+1(508)836-2700" use="WP"/>
+        <addr use="WP">
+          <streetAddressLine partType="SAL">2 Technology Dr.</streetAddressLine>
+          <city partType="CTY">Westborough</city>
+          <state partType="STA">MA</state>
+          <postalCode partType="ZIP">01581</postalCode>
+          <country partType="CNT">US</country>
+        </addr>
+      </scopingOrganization>
+    </associatedEntity>
+  </participant>
+  <inFulfillmentOf>
+    <order>
+      <id root="2.25.300482169457150407075386186229743407818.5" extension="c31e0ce4-ca7b-4e8d-a4db-f475642bce6e" assigningAuthorityName="NTHS"/>
+      <code nullFlavor="OTH"><originalText>urn:dt-org:dsm:map:2025:perinatal | Perinatal | http://objects.directtrust.org/standards/terminology/CodeSystem/DTContextTypeCodeCS</originalText></code></order>
+  </inFulfillmentOf>
+  <relatedDocument typeCode="RPLC"><parentDocument><id root="2.25.300482169457150407075386186229743407818.2" extension="6796b0e9-6239-42f6-beb6-927e28beb52f"/><setId root="2.25.300482169457150407075386186229743407818.2" extension="b695a723-59a6-4675-95b6-09f522053a3a"/><versionNumber value="1774552020001"/></parentDocument></relatedDocument><component><structuredBody><component><section><code code="71482-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Risk assessment Document"/><title>Source Form Document</title><text><paragraph>Corrected synthetic Pregnancy Risk Assessment source report as of March 26, 2026. Replaces the inconsistent payer-branded scanned demonstration form; DOB, EDD, current medication and coverage now agree with the CDA and story.</paragraph><renderMultiMedia referencedObject="SourceForm"/></text><entry><observationMedia classCode="OBS" moodCode="EVN" ID="SourceForm"><id root="017c1c6e-894e-46c5-afa0-463083769f1f" extension="20c56fc0-7c83-4ca9-b84d-f61f333b7a5f"/><value xsi:type="ED" representation="B64" mediaType="application/pdf">JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNCAwIFIKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YxIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKMyAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMiAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjQgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EtQm9sZE9ibGlxdWUgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YzIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNSAwIG9iago8PAovQ29udGVudHMgOSAwIFIgL01lZGlhQm94IFsgMCAwIDYxMiA3OTIgXSAvUGFyZW50IDggMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIC9UcmFucyA8PAoKPj4gCiAgL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL1BhZ2VNb2RlIC9Vc2VOb25lIC9QYWdlcyA4IDAgUiAvVHlwZSAvQ2F0YWxvZwo+PgplbmRvYmoKNyAwIG9iago8PAovQXV0aG9yIChcKGFub255bW91c1wpKSAvQ3JlYXRpb25EYXRlIChEOjIwMjYxMDA3MjE1NTEyKzAzJzAwJykgL0NyZWF0b3IgKFwodW5zcGVjaWZpZWRcKSkgL0tleXdvcmRzICgpIC9Nb2REYXRlIChEOjIwMjYxMDA3MjE1NTEyKzAzJzAwJykgL1Byb2R1Y2VyIChSZXBvcnRMYWIgUERGIExpYnJhcnkgLSBcKG9wZW5zb3VyY2VcKSkgCiAgL1N1YmplY3QgKFwodW5zcGVjaWZpZWRcKSkgL1RpdGxlIChNaW1pIFNoZWxsIFByZWduYW5jeSBSaXNrIEFzc2Vzc21lbnQgLSBNYXJjaCAyNiwgMjAyNikgL1RyYXBwZWQgL0ZhbHNlCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9Db3VudCAxIC9LaWRzIFsgNSAwIFIgXSAvVHlwZSAvUGFnZXMKPj4KZW5kb2JqCjkgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggMjY1Mgo+PgpzdHJlYW0KR2F0bTxnTik+YSZVZzpUa1hSIjM7Uzs7V1FlN1RPPGdEY2gvRj1kZidGQEBQTzk+ZTYtIzUiUVRANG9PP1VpNV85XC1BUCxuTj42bVFRJm85K0hEVm8vRnNOREg4VWhtI3BcXkMtdWxII0lKZk1dQEVnJklFXWtKSGhiMjtbTUsnVm51dC1MTWhUQSMvVSZDNWtzKVAyRk0maTpHWStMZSVDKi0iazEqNCsxKyJUcjAzMiY8VStBKl89JmMyJ2ErQ1pIUGNqNC9zIkNiVTJtKilVNXUmN2xsbkonLF9WQCleXjQsPyoiWjVkNC4iakl1WFFmLSw5LG9eYiNHNC8iTkNxaDNORWdDPDpOM2QxWCtXKnNbK09NPCpac1ZhOEVtXVFINGpyKmdDRjthXyFjVV06PW9mZ0NJI0JkMSJMTGNfbzhiKz4vWltzVzlkNE5oRD89Vk1TRSkmNnIrMyVTWlZEUlNhIWwpMWBWTVAwWS4wIzptUFRRNS8mLSZAXlZFXSNtZ08sOyhQPEA5VGpcJm5rdGQ9blJXXiUzRS9PO0w7Y2JUUHVLYlxQZzQqNj0raSlFPERmIUVnMig6TlVRa2BhXihhMyFYTz9gVi9uJzlXJlorIzFOakxKZllzI3FGUEFaRDNBJCxoRGdlXlZRWC9gRUQyYWhlcjtkMDA8IlBeV2ApIm5VKFhIL3JsL18kO1JpVkhoMG51LSdybSRGMWozVEdcViUsQXM4S1UobCpSJCdEciJWRC9tKHJYLDFFM0pSZiVhQ18pTkNvWig5Oj5tSmF0SUslMCxiOV8tYVtUXWVoWTRpOGAzXTprWmUmLUZvKmNNNCRPLzlFSFQkbGBVaSxTcGxqZ3RhKi9OU0lYWmM6MScmbDhPWztrPnF0JlhmaWhzSTRndSdQSEIubkFGZidfL242XGxQR0IiPkwlVk0uUU8qNkVqWTg3Wk0wQmcvJCc7WittRmJTUD1OKGpkTGIqVktMQS1iXSVrKD4tT2EkKFByPlRMRz1TbXEuWyonRkBQY1tsKi5kb1xZUDMxOUFIOXBZW2FYXlxeZ3JaSWIiTGpTaip0P2QnKm8qLiVobDdobjVTQUxZSDFgczhPST0mXTReXytlYExiJ11aY0UhczpQRmlqYEdcPzc/VUFNM2I4MkhfNDNDbyM+ZnI3SG1yUz1tSy5GO1gjMzduJS1GQGpjQ08/SSxYX01TXFNAMzlKITpsQihWQk1HbTk8N24nc2U8QS9GMlRac3NTbGdrWT9oQlsnJmlwQGsxaTN0cVIhZUUpTFw7PisqVE8xYW45KEtcRFpobiNPMiZGMDNYWURAbkZnOGptZE8hKzBdNDdQN2gsLFxqYT4zKEhsaCYzWkdzPlpWUS51YjI1OmBPJVVmTSRiTzFxZWNLLWFRNGc9MmInYXVKT1YoNC5KP1lIJVsqQjZkOihtOD5rQkZtcz89VD0jNjskSFRKIlBdJGZLNmcoSi0jSS80PkhYWChNOz8wLkJdL0VpKGkwUWY2XVZTNjo+K3RjJTUjTVM7bG1SXiRIPVM0alV0VCtFLGNWUjlZW2NCbUA4P05aLG9ELC1SZXRaaWNIMWRdcWcxNEpnWCg2bW5OazdgWStic1EvRVhZOl9kM1xAR05JOjY7KGFbc2Yybz1wXi4oUS1RSGshaWBaJ1hkMzZXLzdFTGUjWF8iRCxzbXApOCFoWSVpIldeMlhYb3QtMGo+YDVEIVYwU0FaMDU8KSMvPDYoKFh0KWkhTk41ZjxrUnNYM1EscmA/O3UmR0ZcUSRhNyZWXDw6KidjJmZcb2ZMRyo+QSFIWVc6WkVuREk8YVpJWEBHOztMZUZvUiMmVnIhQihTWmxGMWcrQVYrNSknRWxGcnVaWlxacF5bQHAnSmApLV45RSQ2KXJtQyNtPWhRMCNjR3JvTVRnajokJjZJbCptL0pnSEo9MVxANi5DVnBvIW1PPyJtS0xuL14uL25tRlVZYiZsRTZqZFNfK0U7JyRGcyRjcjRULFFPUDVLbiJuZDM2SmdFLy51VXVsYi9oc1hCWnBYKiJzR0xmWVo4JUlrZCdyTmVsPScxSmtBY19hLnI9OFJXaHBXXz9mYDBWXVolclcxTzomWkZgNG0ncEhxbU4jIkxAIyVlVGs2R0g0ZnRkTiZZYlMndUVfQiQma1kxa2FnREY8V2hQVkgpLnVsaE9jay8mcVJsaDNLSz0qUXRORnI9XGIycFMqVVMvLV0obUYnRUlLV2dEIkN1Rj9cbmBGQz5MVTxDaWwyIzpEXVM2UWBRaGhcdFJYb2JzJ11OUyUiSyltbjAmL102SC0kS0ZJZk81NkZkWi9OZ0Y5NGBqOSFNc2Y9KHJvVV9LcmUoTTJ0aFRwIyVubF9wIkpNOkZES3NTPSlTNUpEW25JL1U+aFgpOEYvXyVSQ2xgPzdFWGRdVXNuQG4iUSh1TlZZYUZGQSI1bUAmW0o2KGFpPU5RaT4jJkNxMmw9RC89cj5eJkxqTTRvY0VsWFs+czZLJUpFWjhLY10vK0JRPz5hcUY5KEAsaz05ZTRAQT9rM2omYUI2Z1tpRjI8c1I0SjZbJCk0a0FmJ1s2cV9JJS08dG1mI1skUSZWSCZESylOQz5wNGlOaHMuQS9eallASyJWJVtBV2V1RGY/czVTMWlgQGtDUSk2QnMpLUlibEFcQl5OK0pTRVY/RV1DUDprOklCdCJTUVw6Yjc8N1VBcGQ7ZSQ4cCtJIk4nJlhMc0s6akxxOzEsNkFzPnU8OjQ7NWojIk1AQDM+K1xmXyw2NnA6L01zZTlNMz1eSm9WWmgvVm4iSGYhLFkuUCEyaSs9LDtBL25McCwycjlJZV1WTk81bEhQZlxhLzpyRVxZRF9NbyNFclJVYWI0cFUlYWAtOUhaQTsnYy5mRiMkdDNjM3J0KU4xQVdbVUdEPjRRSCN1S29OWz04O20jUEdxJUEhS1xmYVdFVG9sbC5cOFVmXVBQJXNIWWlua0M/ZVY4c1glRmYyIlBaM1ZQOTpoUy5ObjdSM0M0IUhoSkVRQ01Tbj8xMTY0QFozVik6XSlhYSc4M2VvaVxCIzplP29JNiRqJ0hMWE8+QXI7bHBuKWpaJkdELV1nXmwibzdnJ1liWFooYEBEPkZUIjclS2dWaU1rUlhpNTBHT1E0TUFrOT80MyQySF9LZ2clWWYrTTMhaDs4TC8tWmNTNUpMMkxMP1Y3OWgnXHBRKkVFWjZecSxzNjs0QjBxKSMnJVY3NHBMYmJlTkI5VF82TUJsUUpvQ1BZUTNaWjNFIS82P25uLzRAXiEwVk9PQ19DMVhmV1ljazZmNGJDWEZwWHEkPz4pTzdVZVVMMFBqMClBZFIhK05HaCpYPjIjTTI4PylYTGJrMV5OQzo3OChzIUZFZiJVbT1da1RGZWh1ZGI7PlZiSmdvKC9VNl1ZInFCc11jLkBJUFAzKT9AS0w3ZGVtR0smSTw0Iz8pQm5WXm5ROjpYcFdxWCVgRk9PYkopRys7ZGJlJnFlViwuKnBidFYiUH4+ZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgMTAKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDYxIDAwMDAwIG4gCjAwMDAwMDAxMTIgMDAwMDAgbiAKMDAwMDAwMDIxOSAwMDAwMCBuIAowMDAwMDAwMzMxIDAwMDAwIG4gCjAwMDAwMDA0NTAgMDAwMDAgbiAKMDAwMDAwMDY0MyAwMDAwMCBuIAowMDAwMDAwNzExIDAwMDAwIG4gCjAwMDAwMDEwMzEgMDAwMDAgbiAKMDAwMDAwMTA5MCAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9JRCAKWzxlOGIzMWQ4ZjJkN2NkZTZmZTg3NjQ0NzRiNWIzZGFlZD48ZThiMzFkOGYyZDdjZGU2ZmU4NzY0NDc0YjViM2RhZWQ+XQolIFJlcG9ydExhYiBnZW5lcmF0ZWQgUERGIGRvY3VtZW50IC0tIGRpZ2VzdCAob3BlbnNvdXJjZSkKCi9JbmZvIDcgMCBSCi9Sb290IDYgMCBSCi9TaXplIDEwCj4+CnN0YXJ0eHJlZgozODMzCiUlRU9GCg==</value></observationMedia></entry></section></component><component><section>
+              <templateId root="2.16.840.1.113883.10.20.22.2.5" extension="2015-08-01"/>
+              <templateId root="2.16.840.1.113883.10.20.22.2.5"/><code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem list - Reported"/>
+              <title>Problems</title>
+              <text><paragraph>Risk assessment completed March 26, 2026 at 2:07 PM CDT. Mimi Elena Shell, DOB August 10, 1997, age 28; G3P2002; current gestational age 11 weeks 0 days. Initial prenatal visit: March 20, 2026 at 10 weeks 1 day. LMP January 8, 2026; established EDD October 15, 2026; singleton pregnancy confirmed March 4.</paragraph><table border="1" width="100%"><thead><tr><th>Date</th><th>Problem / risk factor</th><th>Status / relevance</th></tr></thead><tbody><tr><td>3/24/2026</td><td>Pre-existing hypothyroidism</td><td>Active and treated. Initial prenatal testing collected March 20 and reviewed March 24: TSH 4.1 mIU/L; Free T4 0.9 ng/dL. Levothyroxine increased from 100 mcg to 125 mcg by mouth daily on March 24. Current dose at this snapshot: 125 mcg daily.</td></tr><tr><td>3/20/2026</td><td>Elevated pre-pregnancy weight / BMI</td><td>Pre-pregnancy weight 180 lb; height approximately 65 in. Calculated BMI approximately 30; the source materials described maternal obesity, but exact height and classification are not independently established. Relevant to pregnancy surveillance.</td></tr></tbody></table></text></section>
+          </component><component><section>
+              <code code="75310-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Health concerns document"/>
+              <title>Health Concerns</title>
+              <text><table border="1" width="100%"><thead><tr><th>Date</th><th>Health concern</th><th>Basis / relevance</th></tr></thead><tbody><tr><td>3/20/2026</td><td>Prior cesarean delivery with subsequent successful VBAC</td><td>Edwin Smith: cesarean, 8/3/2022. Molly Beatrice Curic: successful VBAC, 3/31/2024. Patient desires another vaginal birth if clinically appropriate.</td></tr><tr><td>3/20/2026</td><td>Reported historical gestational diabetes; unconfirmed</td><td>The older obstetric-history narrative reports prior gestational diabetes; the risk form does not affirm it, and the current story does not establish details. Retained as an unconfirmed historical report, not a current gestational-diabetes diagnosis.</td></tr><tr><td>3/26/2026</td><td>Social / lifestyle review</td><td>No identified social or lifestyle risk was documented in the supplied early-pregnancy history. Historical stress level 3 of 5; no assistance requested. No tobacco/vaping or recreational-drug exposure reported; alcohol use before pregnancy was reported without quantity/frequency.</td></tr><tr><td>3/26/2026</td><td>Care coordination</td><td>Original source form indicates no provider request for care coordination at this snapshot. No future doula referral or care-team relationship is asserted.</td></tr></tbody></table></text></section>
+          </component></structuredBody></component></ClinicalDocument>

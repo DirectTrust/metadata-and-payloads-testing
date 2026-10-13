@@ -1,0 +1,32 @@
+{
+	"patientId": "NTHS-00003007",
+	"demographics": {
+		"firstName": "Mimi",
+		"lastName": "Shell",
+		"fullName": "Mimi Shell",
+		"dob": "1997-08-10",
+		"gender": "F"
+	},
+	"scenarios": [
+		{
+			"name": "Provide Notification of Pregnancy and Risk Factors",
+			"transactions": [
+				{
+					"name": "send-documents",
+					"payloadContents": [
+						{
+							"name": "Pregnancy Summary Notification",
+							"contentFile": "PregnancySummaryNotification.xml",
+							"mimeType": "application/xml+cda"
+						},
+						{
+							"name": "Pregnancy Risk Assessment",
+							"contentFile": "PregnancyRiskAssessment.xml",
+							"mimeType": "application/xml+cda"
+						}
+					]
+				}
+			]
+		}
+	]
+}
