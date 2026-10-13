@@ -310,7 +310,7 @@
 				{
 					"name": "HL7 CDA Document",
 					"required": "false",
-					"mimeType": "application/xml+cda",
+					"mimeType": "application/cda+xml",
 					"metadata": {
 						"XD": {
 							"classCode": "send-documents"

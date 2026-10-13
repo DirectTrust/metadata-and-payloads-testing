@@ -17,12 +17,46 @@
 						{
 							"name": "Pregnancy Summary Notification",
 							"contentFile": "PregnancySummaryNotification.xml",
-							"mimeType": "application/xml+cda"
+							"mimeType": "application/cda+xml",
+							"metadata": {
+								"XD": {
+									"title": "Pregnancy Summary / Notification",
+									"classCode": "90767-5",
+									"classCodeDisplay": "Pregnancy summary Document",
+									"classCodeSystem": "http://loinc.org",
+									"typeCode": "90767-5",
+									"typeCodeDisplay": "Pregnancy summary Document",
+									"typeCodeSystem": "http://loinc.org",
+									"formatCode": "urn:hl7-org:sdwg:ccda-structuredBody:2.1",
+									"formatCodeDisplay": "HL7 C-CDA Release 2.1 Structured Body",
+									"formatCodeSystem": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+									"confidentialityCode": "V",
+									"confidentialityCodeDisplay": "Very Restricted",
+									"confidentialityCodeSystem": "2.16.840.1.113883.5.25"
+								}
+							}
 						},
 						{
 							"name": "Pregnancy Risk Assessment",
 							"contentFile": "PregnancyRiskAssessment.xml",
-							"mimeType": "application/xml+cda"
+							"mimeType": "application/cda+xml",
+							"metadata": {
+								"XD": {
+									"title": "Pregnancy Risk Assessment",
+									"classCode": "71482-4",
+									"classCodeDisplay": "Risk assessment Document",
+									"classCodeSystem": "http://loinc.org",
+									"typeCode": "71482-4",
+									"typeCodeDisplay": "Risk assessment Document",
+									"typeCodeSystem": "http://loinc.org",
+									"formatCode": "urn:hl7-org:sdwg:ccda-structuredBody:2.1",
+									"formatCodeDisplay": "HL7 C-CDA Release 2.1 Structured Body",
+									"formatCodeSystem": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+									"confidentialityCode": "V",
+									"confidentialityCodeDisplay": "Very Restricted",
+									"confidentialityCodeSystem": "2.16.840.1.113883.5.25"
+								}
+							}
 						}
 					]
 				}
