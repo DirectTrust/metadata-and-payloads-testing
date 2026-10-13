@@ -29,6 +29,7 @@ Each transaction:
 | `name`, `description` | Transaction code (e.g. `send-documents`) and description |
 | `metadataTypeCode`, `purpose` | Sent as `x-direct-metadataTypeCode` and `x-direct-purposeOfUse` |
 | `payloadContainerTypes` | Container type; only `XD` is supported |
+| `createHumanReadableContent` | Optional, default `false`. When `true` and the selected documents include no human-readable text, the builder creates one (a summary of the package metadata: patient, source and recipient, context, and each document's classification and identifier) and adds it to the XDM as a document, identical to the message's first part. When `false` or absent, a transaction must be given authored human-readable text or message creation fails. `send-documents` sets it, since its documents are all patient-defined CDAs |
 | `metadata.XD` | The static part of the XDS SubmissionSet (below) |
 | `payloadContents[]` | The documents the transaction can carry: `name`, `required`, `mimeType`, and `metadata.XD` (below). A transaction whose documents are all defined per patient (e.g. `send-documents`) has none required |
 

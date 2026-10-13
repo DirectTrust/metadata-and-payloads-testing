@@ -297,6 +297,7 @@
 			"purpose": "TREATMENT",
 			"workflowStatusRequeted": "",
 			"payloadContainerTypes": "XD",
+			"createHumanReadableContent": true,
 			"metadata": {
 				"XD": {
 					"availabilityStatus": "urn:oasis:names:tc:ebxml-regrep:StatusType:Approved",
