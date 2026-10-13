@@ -62,6 +62,61 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Provide Referral/Orders for Birth Services",
+			"transactions": [
+				{
+					"name": "send-documents",
+					"payloadContents": [
+						{
+							"name": "Obstetrics Referral Note",
+							"contentFile": "BirthHospitalReferral.xml",
+							"mimeType": "application/cda+xml",
+							"metadata": {
+								"XD": {
+									"title": "Obstetrics Referral Note - Birth Hospital - August 21, 2026",
+									"principal": true,
+									"classCode": "57133-1",
+									"classCodeDisplay": "Referral Note",
+									"classCodeSystem": "http://loinc.org",
+									"typeCode": "89234-9",
+									"typeCodeDisplay": "Obstetrics Referral Note",
+									"typeCodeSystem": "http://loinc.org",
+									"formatCode": "urn:hl7-org:sdwg:ccda-structuredBody:2.1",
+									"formatCodeDisplay": "HL7 C-CDA Release 2.1 Structured Body",
+									"formatCodeSystem": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+									"confidentialityCode": "N",
+									"confidentialityCodeDisplay": "Normal",
+									"confidentialityCodeSystem": "2.16.840.1.113883.5.25"
+								}
+							}
+						},
+						{
+							"name": "Antepartum Summary",
+							"contentFile": "AntepartumSummary.xml",
+							"mimeType": "application/cda+xml",
+							"metadata": {
+								"XD": {
+									"title": "Antepartum Summary - August 21, 2026 (32 weeks 1 day)",
+									"classCode": "10162-6",
+									"classCodeDisplay": "History of pregnancies",
+									"classCodeSystem": "http://loinc.org",
+									"typeCode": "57055-6",
+									"typeCodeDisplay": "Antepartum Summary",
+									"typeCodeSystem": "http://loinc.org",
+									"formatCode": "urn:hl7-org:sdwg:ccda-structuredBody:2.1",
+									"formatCodeDisplay": "HL7 C-CDA Release 2.1 Structured Body",
+									"formatCodeSystem": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+									"confidentialityCode": "V",
+									"confidentialityCodeDisplay": "Very Restricted",
+									"confidentialityCodeSystem": "2.16.840.1.113883.5.25"
+								}
+							}
+						}
+					]
+				}
+			]
 		}
 	]
 }

@@ -303,7 +303,7 @@
 					"availabilityStatus": "urn:oasis:names:tc:ebxml-regrep:StatusType:Approved",
 					"purpose": "send-documents",
 					"title": "Maternal Health Documents",
-					"referenceIdContextTypes": ["perinatal", "pregnancy", "visit", "request"]
+					"referenceIdContextTypes": ["perinatal", "pregnancy", "visit", "request", "urn:ihe:iti:xds:2013:referral"]
 				}
 			},
 			"payloadContents": [
