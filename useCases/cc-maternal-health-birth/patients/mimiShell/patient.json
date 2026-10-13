@@ -21,6 +21,7 @@
 							"metadata": {
 								"XD": {
 									"title": "Pregnancy Summary / Notification",
+									"principal": true,
 									"classCode": "90767-5",
 									"classCodeDisplay": "Pregnancy summary Document",
 									"classCodeSystem": "http://loinc.org",

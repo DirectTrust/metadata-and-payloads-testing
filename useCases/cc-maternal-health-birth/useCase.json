@@ -300,10 +300,9 @@
 			"metadata": {
 				"XD": {
 					"availabilityStatus": "urn:oasis:names:tc:ebxml-regrep:StatusType:Approved",
-					"contentTypeCode": "send-documents",
 					"purpose": "send-documents",
 					"title": "Maternal Health Documents",
-					"referenceIdContextTypes": ["pregnancy", "visit", "request"]
+					"referenceIdContextTypes": ["perinatal", "pregnancy", "visit", "request"]
 				}
 			},
 			"payloadContents": [
