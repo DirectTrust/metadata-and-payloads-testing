@@ -17,7 +17,6 @@
 			"purpose": "TREATMENT",
 			"workflowStatusRequeted": "",
 			"payloadContainerTypes": "XD",
-			"patientContextRequired": "true",
 			"metadata": {
 				"XD": {
 					"availabilityStatus": "urn:oasis:names:tc:ebxml-regrep:StatusType:Approved",
@@ -127,7 +126,6 @@
 			"purpose": "TREATMENT",
 			"workflowStatusRequeted": "",
 			"payloadContainerTypes": "XD",
-			"patientContextRequired": "true",
 			"metadata": {
 				"XD": {
 					"availabilityStatus": "urn:oasis:names:tc:ebxml-regrep:StatusType:Approved",
@@ -185,7 +183,6 @@
 			"purpose": "TREATMENT",
 			"workflowStatusRequeted": "",
 			"payloadContainerTypes": "XD",
-			"patientContextRequired": "true",
 			"metadata": {
 				"XD": {
 					"availabilityStatus": "urn:oasis:names:tc:ebxml-regrep:StatusType:Approved",
@@ -243,7 +240,6 @@
 			"purpose": "TREATMENT",
 			"workflowStatusRequeted": "",
 			"payloadContainerTypes": "XD",
-			"patientContextRequired": "true",
 			"metadata": {
 				"XD": {
 					"availabilityStatus": "urn:oasis:names:tc:ebxml-regrep:StatusType:Approved",
@@ -301,7 +297,6 @@
 			"purpose": "TREATMENT",
 			"workflowStatusRequeted": "",
 			"payloadContainerTypes": "XD",
-			"patientContextRequired": "true",
 			"metadata": {
 				"XD": {
 					"availabilityStatus": "urn:oasis:names:tc:ebxml-regrep:StatusType:Approved",
@@ -331,7 +326,6 @@
 			"purpose": "TREATMENT",
 			"workflowStatusRequeted": "",
 			"payloadContainerTypes": "XD",
-			"patientContextRequired": "true",
 			"metadata": {
 				"XD": {
 					"availabilityStatus": "urn:oasis:names:tc:ebxml-regrep:StatusType:Approved",
