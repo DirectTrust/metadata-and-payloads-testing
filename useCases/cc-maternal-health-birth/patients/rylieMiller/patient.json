@@ -8,44 +8,49 @@
 		"gender": "F"
 		
 	},
-	"transactions": [
+	"scenarios": [
 		{
-			"name": "send-documents",
-			"payloadContents": [
+			"name": "default",
+			"transactions": [
 				{
-					"name": "HL7 CDA Document",
-					"contentFile": "tx5-cda.xml"
+					"name": "send-documents",
+					"payloadContents": [
+						{
+							"name": "HL7 CDA Document",
+							"contentFile": "tx5-cda.xml"
 
-				},
-				{
-					"name": "HL7 CDA Document 2",
-					"contentFile": "tx5-cda2.xml",
-					"mimeType": "application/xml+cda"
+						},
+						{
+							"name": "HL7 CDA Document 2",
+							"contentFile": "tx5-cda2.xml",
+							"mimeType": "application/xml+cda"
 
-				}
+						}
 				
-			]
-		},
-		{
-			"name": "send-workflow-status",
-			"payloadContents": [
+					]
+				},
 				{
-					"name": "FHIR Task workflow-status payload",
-					"contentFile": "tx8-status.xml"
+					"name": "send-workflow-status",
+					"payloadContents": [
+						{
+							"name": "FHIR Task workflow-status payload",
+							"contentFile": "tx8-status.xml"
 
-				},
-				{
-					"name": "Human-readable healthcare communication",
-					"contentFile": "tx8-human-readable.txt"
-				},
-				{
-					"name": "HTML healthcare communication",
-					"contentFile": "tx8-human-readable.html"
-				}	
+						},
+						{
+							"name": "Human-readable healthcare communication",
+							"contentFile": "tx8-human-readable.txt"
+						},
+						{
+							"name": "HTML healthcare communication",
+							"contentFile": "tx8-human-readable.html"
+						}	
 				
-			]
-		}					
+					]
+				}					
 		
+			]
+		}
 	]
 	
 }
