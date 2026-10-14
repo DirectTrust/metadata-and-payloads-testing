@@ -184,6 +184,87 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Share Maternal Discharge Summary, L&D Summary, and Postpartum Care Plan",
+			"transactions": [
+				{
+					"name": "send-documents",
+					"payloadContents": [
+						{
+							"name": "Workflow Activity Task",
+							"contentFile": "DischargeSummaryTask.xml"
+						},
+						{
+							"name": "Maternal Discharge Summary",
+							"contentFile": "MaternalDischargeSummary.xml",
+							"mimeType": "application/cda+xml",
+							"metadata": {
+								"XD": {
+									"title": "Maternal Discharge Summary",
+									"principal": true,
+									"classCode": "10162-6",
+									"classCodeDisplay": "History of pregnancies",
+									"classCodeSystem": "http://loinc.org",
+									"typeCode": "92576-8",
+									"typeCodeDisplay": "Maternal discharge summary",
+									"typeCodeSystem": "http://loinc.org",
+									"formatCode": "urn:hl7-org:sdwg:ccda-structuredBody:2.1",
+									"formatCodeDisplay": "HL7 C-CDA Release 2.1 Structured Body",
+									"formatCodeSystem": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+									"confidentialityCode": "N",
+									"confidentialityCodeDisplay": "Normal",
+									"confidentialityCodeSystem": "2.16.840.1.113883.5.25"
+								}
+							}
+						},
+						{
+							"name": "Labor and Delivery Summary",
+							"contentFile": "LaborAndDeliverySummary.xml",
+							"mimeType": "application/cda+xml",
+							"metadata": {
+								"XD": {
+									"title": "Labor and Delivery Summary",
+									"classCode": "10162-6",
+									"classCodeDisplay": "History of pregnancies",
+									"classCodeSystem": "http://loinc.org",
+									"typeCode": "57057-2",
+									"typeCodeDisplay": "Labor and delivery summary",
+									"typeCodeSystem": "http://loinc.org",
+									"formatCode": "urn:hl7-org:sdwg:ccda-structuredBody:2.1",
+									"formatCodeDisplay": "HL7 C-CDA Release 2.1 Structured Body",
+									"formatCodeSystem": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+									"confidentialityCode": "N",
+									"confidentialityCodeDisplay": "Normal",
+									"confidentialityCodeSystem": "2.16.840.1.113883.5.25"
+								}
+							}
+						},
+						{
+							"name": "Postpartum Care Plan",
+							"contentFile": "PostpartumCarePlan.xml",
+							"mimeType": "application/cda+xml",
+							"metadata": {
+								"XD": {
+									"title": "Postpartum Care Plan",
+									"classCode": "10162-6",
+									"classCodeDisplay": "History of pregnancies",
+									"classCodeSystem": "http://loinc.org",
+									"typeCode": "18776-5",
+									"typeCodeDisplay": "Plan of care note",
+									"typeCodeSystem": "http://loinc.org",
+									"formatCode": "urn:hl7-org:sdwg:ccda-structuredBody:2.1",
+									"formatCodeDisplay": "HL7 C-CDA Release 2.1 Structured Body",
+									"formatCodeSystem": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+									"confidentialityCode": "N",
+									"confidentialityCodeDisplay": "Normal",
+									"confidentialityCodeSystem": "2.16.840.1.113883.5.25"
+								}
+							}
+						}
+					]
+				}
+			]
 		}
 	]
 }
