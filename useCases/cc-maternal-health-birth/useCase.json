@@ -316,7 +316,7 @@
 							"title": "Workflow Activity Task",
 							"classCode": "Task",
 							"classCodeDisplay": "FHIR Task",
-							"classCodeSystem": "http://hl7.org/fhir/resource-types",
+							"classCodeSystem": "2.16.840.1.113883.4.642.4.2",
 							"typeCode": "requested",
 							"typeCodeDisplay": "requested",
 							"typeCodeSystem": "http://hl7.org/fhir/task-status",
