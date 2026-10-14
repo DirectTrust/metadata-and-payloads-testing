@@ -125,6 +125,65 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Provide Antepartum Summary Information Across Care Settings",
+			"transactions": [
+				{
+					"name": "send-documents",
+					"payloadContents": [
+						{
+							"name": "Workflow Activity Task",
+							"contentFile": "AcrossCareSettingsTask.xml"
+						},
+						{
+							"name": "Antepartum Summary",
+							"contentFile": "AntepartumSummary36Weeks.xml",
+							"mimeType": "application/cda+xml",
+							"metadata": {
+								"XD": {
+									"title": "Antepartum Summary - September 18, 2026 (36 weeks 1 day)",
+									"principal": true,
+									"classCode": "10162-6",
+									"classCodeDisplay": "History of pregnancies",
+									"classCodeSystem": "http://loinc.org",
+									"typeCode": "57055-6",
+									"typeCodeDisplay": "Antepartum Summary",
+									"typeCodeSystem": "http://loinc.org",
+									"formatCode": "urn:hl7-org:sdwg:ccda-structuredBody:2.1",
+									"formatCodeDisplay": "HL7 C-CDA Release 2.1 Structured Body",
+									"formatCodeSystem": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+									"confidentialityCode": "V",
+									"confidentialityCodeDisplay": "Very Restricted",
+									"confidentialityCodeSystem": "2.16.840.1.113883.5.25"
+								}
+							}
+						},
+						{
+							"name": "Personal Birth Plan",
+							"contentFile": "PersonalBirthPlan.xml",
+							"mimeType": "application/cda+xml",
+							"metadata": {
+								"XD": {
+									"title": "Personal Birth Plan - Version 1 - September 18, 2026",
+									"classCode": "10162-6",
+									"classCodeDisplay": "History of pregnancies",
+									"classCodeSystem": "http://loinc.org",
+									"typeCode": "57079-6",
+									"typeCodeDisplay": "Personal Birth Plan",
+									"typeCodeSystem": "http://loinc.org",
+									"formatCode": "urn:hl7-org:sdwg:ccda-structuredBody:2.1",
+									"formatCodeDisplay": "HL7 C-CDA Release 2.1 Structured Body",
+									"formatCodeSystem": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+									"confidentialityCode": "N",
+									"confidentialityCodeDisplay": "Normal",
+									"confidentialityCodeSystem": "2.16.840.1.113883.5.25"
+								}
+							}
+						}
+					]
+				}
+			]
 		}
 	]
 }
