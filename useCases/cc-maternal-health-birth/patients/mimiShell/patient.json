@@ -15,6 +15,10 @@
 					"name": "send-documents",
 					"payloadContents": [
 						{
+							"name": "Workflow Activity Task",
+							"contentFile": "PregnancyNotificationTask.xml"
+						},
+						{
 							"name": "Pregnancy Summary Notification",
 							"contentFile": "PregnancySummaryNotification.xml",
 							"mimeType": "application/cda+xml",
@@ -69,6 +73,10 @@
 				{
 					"name": "send-documents",
 					"payloadContents": [
+						{
+							"name": "Workflow Activity Task",
+							"contentFile": "BirthReferralTask.xml"
+						},
 						{
 							"name": "Obstetrics Referral Note",
 							"contentFile": "BirthHospitalReferral.xml",

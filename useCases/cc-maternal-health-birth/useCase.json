@@ -308,6 +308,25 @@
 			},
 			"payloadContents": [
 				{
+					"name": "Workflow Activity Task",
+					"required": "true",
+					"mimeType": "application/fhir+xml",
+					"metadata": {
+						"XD": {
+							"title": "Workflow Activity Task",
+							"classCode": "Task",
+							"classCodeDisplay": "FHIR Task",
+							"classCodeSystem": "http://hl7.org/fhir/resource-types",
+							"typeCode": "requested",
+							"typeCodeDisplay": "requested",
+							"typeCodeSystem": "http://hl7.org/fhir/task-status",
+							"confidentialityCode": "N",
+							"confidentialityCodeDisplay": "Normal",
+							"confidentialityCodeSystem": "2.16.840.1.113883.5.25"
+						}
+					}
+				},
+				{
 					"name": "HL7 CDA Document",
 					"required": "false",
 					"mimeType": "application/cda+xml",
