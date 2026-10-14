@@ -60,8 +60,8 @@
         <country>US</country>
       </addr>
       <telecom use="WP" value="tel:+1-940-381-1501"/>
-      <telecom use="WP" value="mailto:S.M.Heps@hsnt.org"/>
-      <telecom use="WP" value="mailto:s.heps@direct.nths.example"/>
+      <telecom use="WP" value="mailto:{{sender.address}}"/>
+      <telecom use="WP" value="mailto:{{sender.address}}"/>
       <assignedPerson>
         <name>
           <given>Simone</given><family>Heps</family></name>
@@ -70,7 +70,7 @@
         <id root="2.25.300482169457150407075386186229743407818"/><id root="2.16.840.1.113883.4.6" extension="1124538442"/>
         <name>Health Services of North Texas</name>
         <telecom use="WP" value="tel:+1-940-381-1501"/>
-        <telecom use="WP" value="mailto:NTHSmaternalhealth@direct.interoplearninglab.net"/>
+        <telecom use="WP" value="mailto:{{sender.address}}"/>
         <addr use="WP">
           <streetAddressLine>4401 N Interstate 35 Unit 312</streetAddressLine>
           <city>Denton</city>
@@ -86,7 +86,7 @@
       <representedCustodianOrganization>
         <id root="2.25.300482169457150407075386186229743407818"/><id root="2.16.840.1.113883.4.6" extension="1124538442"/>
         <name>Health Services of North Texas</name>
-        <telecom use="WP" value="mailto:NTHSmaternalhealth@direct.interoplearninglab.net"/>
+        <telecom use="WP" value="mailto:{{sender.address}}"/>
         <addr use="WP">
           <streetAddressLine>4401 N Interstate 35 Unit 312</streetAddressLine>
           <city>Denton</city>
@@ -97,7 +97,7 @@
       </representedCustodianOrganization>
     </assignedCustodian>
   </custodian>
-  <informationRecipient><intendedRecipient><receivedOrganization><id root="2.25.314722886219341047040790081276079438986"/><id root="2.16.840.1.113883.4.6" extension="1003883158" assigningAuthorityName="National Provider ID"/><name>Texas Health Presbyterian Hospital Denton</name><telecom use="WP" value="mailto:TRWmaternalhealth@direct.interoplearninglab.net"/><addr use="WP"><streetAddressLine>3000 North I-35</streetAddressLine><city>Denton</city><state>TX</state><postalCode>76201-5119</postalCode><country>US</country></addr></receivedOrganization></intendedRecipient></informationRecipient><legalAuthenticator><time value="20260821112500-0500"/><signatureCode code="S"/><assignedEntity><id root="2.16.840.1.113883.4.6" extension="1417947383" assigningAuthorityName="National Provider ID"/></assignedEntity></legalAuthenticator><participant typeCode="IND">
+  <informationRecipient><intendedRecipient><receivedOrganization><id root="2.25.314722886219341047040790081276079438986"/><id root="2.16.840.1.113883.4.6" extension="1003883158" assigningAuthorityName="National Provider ID"/><name>Texas Health Presbyterian Hospital Denton</name><telecom use="WP" value="mailto:{{recipient.address}}"/><addr use="WP"><streetAddressLine>3000 North I-35</streetAddressLine><city>Denton</city><state>TX</state><postalCode>76201-5119</postalCode><country>US</country></addr></receivedOrganization></intendedRecipient></informationRecipient><legalAuthenticator><time value="20260821112500-0500"/><signatureCode code="S"/><assignedEntity><id root="2.16.840.1.113883.4.6" extension="1417947383" assigningAuthorityName="National Provider ID"/></assignedEntity></legalAuthenticator><participant typeCode="IND">
     <associatedEntity classCode="PRS">
       <addr use="HP">
         <streetAddressLine>1200 Dallas Dr</streetAddressLine>
@@ -174,7 +174,7 @@
             <id root="2.25.300482169457150407075386186229743407818"/><id root="2.16.840.1.113883.4.6" extension="1124538442"/>
             <name>Health Services of North Texas</name>
             <telecom use="WP" value="tel:+1-940-381-1501"/>
-            <telecom use="WP" value="mailto:NTHSmaternalhealth@direct.interoplearninglab.net"/>
+            <telecom use="WP" value="mailto:{{sender.address}}"/>
             <addr use="WP">
               <streetAddressLine>4401 N Interstate 35 Unit 312</streetAddressLine>
               <city>Denton</city>

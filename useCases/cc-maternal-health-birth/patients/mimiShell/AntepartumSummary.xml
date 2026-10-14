@@ -57,13 +57,13 @@
         <country>US</country>
       </addr>
       <telecom use="WP" value="tel:+1-940-381-1501"/>
-      <telecom use="WP" value="mailto:S.M.Heps@hsnt.org"/>
-      <telecom use="WP" value="mailto:s.heps@direct.nths.example"/>
+      <telecom use="WP" value="mailto:{{sender.address}}"/>
+      <telecom use="WP" value="mailto:{{sender.address}}"/>
       <assignedPerson><name><given>Simone</given><family>Heps</family></name></assignedPerson><representedOrganization>
         <id root="2.25.300482169457150407075386186229743407818"/><id root="2.16.840.1.113883.4.6" extension="1124538442"/>
         <name>Health Services of North Texas</name>
         <telecom use="WP" value="tel:+1-940-381-1501"/>
-        <telecom use="WP" value="mailto:NTHSmaternalhealth@direct.interoplearninglab.net"/>
+        <telecom use="WP" value="mailto:{{sender.address}}"/>
         <addr use="WP">
           <streetAddressLine>4401 N Interstate 35 Unit 312</streetAddressLine>
           <city>Denton</city>
@@ -79,7 +79,7 @@
       <representedCustodianOrganization>
         <id root="2.25.300482169457150407075386186229743407818"/><id root="2.16.840.1.113883.4.6" extension="1124538442"/>
         <name>Health Services of North Texas</name>
-        <telecom use="WP" value="mailto:NTHSmaternalhealth@direct.interoplearninglab.net"/>
+        <telecom use="WP" value="mailto:{{sender.address}}"/>
         <addr use="WP">
           <streetAddressLine>4401 N Interstate 35 Unit 312</streetAddressLine>
           <city>Denton</city>
@@ -164,7 +164,7 @@
             <id root="2.25.300482169457150407075386186229743407818"/><id root="2.16.840.1.113883.4.6" extension="1124538442"/>
             <name>Health Services of North Texas</name>
             <telecom use="WP" value="tel:+1-940-381-1501"/>
-            <telecom use="WP" value="mailto:NTHSmaternalhealth@direct.interoplearninglab.net"/>
+            <telecom use="WP" value="mailto:{{sender.address}}"/>
             <addr use="WP">
               <streetAddressLine>4401 N Interstate 35 Unit 312</streetAddressLine>
               <city>Denton</city>
