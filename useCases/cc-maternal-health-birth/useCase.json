@@ -325,16 +325,6 @@
 							"confidentialityCodeSystem": "2.16.840.1.113883.5.25"
 						}
 					}
-				},
-				{
-					"name": "HL7 CDA Document",
-					"required": "false",
-					"mimeType": "application/cda+xml",
-					"metadata": {
-						"XD": {
-							"classCode": "send-documents"
-						}
-					}
 				}
 			]
 		},
